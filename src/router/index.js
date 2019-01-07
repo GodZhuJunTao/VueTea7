@@ -14,6 +14,7 @@ import Search from '@com/Search';
 import Master from '@com/Master';
 import Login from '@com/Login';
 import Cart from '@com/Cart';
+import Server from '@com/Server';
 
 //4.实例化路由
 const routes = [
@@ -70,6 +71,7 @@ const routes = [
     },
     {name:'Master',path:'/Master',component:Master},
     {name:'Login',path:'/login',component:Login},
+    {name:'Server',path:'/server',component:Server},
     {path:'/',redirect:{name:'Home'}}  //可直接跳到home目标路由上
 ];
 let router = new VueRouter({

@@ -93,16 +93,23 @@ export default {
     }
 }
 </script>
-<style>
-    .mint-tabbar > .mint-tab-item.is-selected{
-        color:#b0352f;
-        background-image: linear-gradient(180deg, #d9d9d9, #d9d9d9 50%, transparent 50%);
-        background-size: 100% 1px;
-        background-repeat: no-repeat;
-        background-position: top left;
-        background-color: #fafafa;
-    }
-    .homeIcon{
-        font-size:22px;
+<style lang="scss">
+    .container{
+        padding-top:50px;
+        .mint-header.is-fixed{
+            background-color:#b0352f;
+            height:50px;
+        }
+        .mint-tabbar > .mint-tab-item.is-selected{
+            color:#b0352f;
+            background-image: linear-gradient(180deg, #d9d9d9, #d9d9d9 50%, transparent 50%);
+            background-size: 100% 1px;
+            background-repeat: no-repeat;
+            background-position: top left;
+            background-color: #fafafa;
+        }
+        .homeIcon{
+            font-size:22px;
+        }
     }
 </style>

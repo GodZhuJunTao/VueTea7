@@ -1,9 +1,10 @@
 <template>
     <div class="page">
-        <mt-header title="茶七产品">
-            <i slot="left">图标</i>
-            <!-- <mt-button icon="search" slot="right" @click="goto('Service')">客服</mt-button> -->
+        <mt-header title="茶七产品" fixed>
+            <i slot="left" class="logoImg"></i>
+            <i class="iconfont icon-xiaoxizhongxin server" slot="right" @click="goto('Server')"></i>
         </mt-header>
+        <input type="text" placeholder="搜索您喜欢的产品">
         <!-- <div class="carousel">
             <mt-swipe :auto="4000">
                 <mt-swipe-item v-for="item in recommend" :key="item.id" @click.native="goto('Detail',item.id)">
@@ -55,7 +56,19 @@ export default {
     }
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
+    .mint-header{
+        .logoImg{
+            display: block;
+            width: 20px;
+            height: 20px;
+            background:url(../assets/img/logo.jpg) no-repeat;
+            background-size:100%;
+        }
+        .server{
+            font-size: 22px;
+        }
+    }
     .carousel{
         height: 200px;
         .mint-swipe-item img{

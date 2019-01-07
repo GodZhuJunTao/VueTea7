@@ -1,6 +1,6 @@
 <template>
     <div class="page">
-        <mt-header title="分类">
+        <mt-header title="分类" fixed>
             <!-- <i slot="left">图标</i> -->
             <mt-button icon="search" slot="right"></mt-button>
         </mt-header>

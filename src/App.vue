@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <router-view/>
-        <mt-tabbar v-model="selected">
+        <mt-tabbar v-model="selected" fixed>
             <mt-tab-item v-for="tab in tabs" :key="tab.name" :id="tab.name" @click.native="goto(tab.path)">
                 <i slot="icon" :class="tab.icon" class="homeIcon"></i>
                 {{tab.text}}
@@ -16,6 +16,10 @@ import Vue from 'vue';
 import MintUI from 'mint-ui';
 Vue.use(MintUI);
 import 'mint-ui/lib/style.css';
+
+// 引入并使用cube-ui
+import Cube from 'cube-ui'
+Vue.use(Cube)
 
 // 引入common.scss
 import './sass/common.scss';

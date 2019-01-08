@@ -4,6 +4,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const { VueLoaderPlugin } = require('vue-loader');
 
+//引入Cube-UI需要的插件
+const TransformModulesPlugin = require('webpack-transform-modules-plugin')
+
 module.exports = {
     // 入口文件
     entry:{
@@ -27,7 +30,7 @@ module.exports = {
         // open:true,
         proxy:{//代理服务器
             '/dbapi':{//以'/dbapi'开头的请求都会进入该代理
-                target:"http://api.douban.com/v2/movie",//代理目标服务器
+                target:"http://m.tea7.com/API",//代理目标服务器
                 changeOrigin: true,
                 pathRewrite: {'^/dbapi' : ''}, //替换部分路径
             }
@@ -40,7 +43,9 @@ module.exports = {
         alias:{
             'vue$':'vue/dist/vue',
             '@':path.resolve('src'),
-            '@com':path.resolve('src/components')
+            '@com':path.resolve('src/components'),
+            // cube-ui的别名
+            'cube-ui': 'cube-ui/lib'
         },
         extensions:['.js','.json','.vue']
     },
@@ -112,6 +117,9 @@ module.exports = {
         new VueLoaderPlugin(),
         
         // 每次编译先清除dist目录
-        new CleanWebpackPlugin('dist')
+        new CleanWebpackPlugin('dist'),
+        
+        // 使用Cube-UI需要的插件
+        new TransformModulesPlugin()
     ]
 }

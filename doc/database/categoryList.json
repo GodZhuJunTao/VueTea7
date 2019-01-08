@@ -1,0 +1,74 @@
+[
+    {
+        "Id": 33,
+        "Name": "绿茶",
+        "SeName": "绿茶",
+        "PictureUrl": "http://img.tea7.com/0011375_0.jpeg",
+        "ParentCategoryId": 0,
+        "AdGroupKeyWord": null,
+        "SubCategories": []
+    },
+    {
+        "Id": 38,
+        "Name": "乌龙",
+        "SeName": "乌龙",
+        "PictureUrl": "http://img.tea7.com/0011383_0.jpeg",
+        "ParentCategoryId": 0,
+        "AdGroupKeyWord": null,
+        "SubCategories": []
+    },
+    {
+        "Id": 16,
+        "Name": "红茶",
+        "SeName": "红茶",
+        "PictureUrl": "http://img.tea7.com/0011377_0.jpeg",
+        "ParentCategoryId": 0,
+        "AdGroupKeyWord": null,
+        "SubCategories": []
+    },
+    {
+        "Id": 19,
+        "Name": "白茶",
+        "SeName": "白茶",
+        "PictureUrl": "http://img.tea7.com/0011378_0.jpeg",
+        "ParentCategoryId": 0,
+        "AdGroupKeyWord": null,
+        "SubCategories": []
+    },
+    {
+        "Id": 35,
+        "Name": "普洱",
+        "SeName": "普洱",
+        "PictureUrl": "http://img.tea7.com/0011379_0.jpeg",
+        "ParentCategoryId": 0,
+        "AdGroupKeyWord": null,
+        "SubCategories": []
+    },
+    {
+        "Id": 43,
+        "Name": "花茶",
+        "SeName": "花茶",
+        "PictureUrl": "http://img.tea7.com/0011380_0.jpeg",
+        "ParentCategoryId": 0,
+        "AdGroupKeyWord": null,
+        "SubCategories": []
+    },
+    {
+        "Id": 1,
+        "Name": "茶具",
+        "SeName": "茶具",
+        "PictureUrl": "http://img.tea7.com/0011381_0.jpeg",
+        "ParentCategoryId": 0,
+        "AdGroupKeyWord": null,
+        "SubCategories": []
+    },
+    {
+        "Id": 72,
+        "Name": "手艺",
+        "SeName": "手艺",
+        "PictureUrl": "http://img.tea7.com/0011382_0.jpeg",
+        "ParentCategoryId": 0,
+        "AdGroupKeyWord": null,
+        "SubCategories": []
+    }
+]

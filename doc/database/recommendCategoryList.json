@@ -1,0 +1,83 @@
+[
+    {
+        "Id": 23,
+        "Name": "铁观音",
+        "SeName": "cat-23",
+        "PictureUrl": "http://img.tea7.com/0011446_0.jpeg?x-oss-process=image/resize,w_150",
+        "ParentCategoryId": 38,
+        "AdGroupKeyWord": null,
+        "SubCategories": []
+    },
+    {
+        "Id": 17,
+        "Name": "金骏眉",
+        "SeName": "cat-17",
+        "PictureUrl": "http://img.tea7.com/0011372_0.jpeg?x-oss-process=image/resize,w_150",
+        "ParentCategoryId": 16,
+        "AdGroupKeyWord": null,
+        "SubCategories": []
+    },
+    {
+        "Id": 15,
+        "Name": "武夷岩茶",
+        "SeName": "cat-15",
+        "PictureUrl": "http://img.tea7.com/0011447_0.jpeg?x-oss-process=image/resize,w_150",
+        "ParentCategoryId": 38,
+        "AdGroupKeyWord": null,
+        "SubCategories": []
+    },
+    {
+        "Id": 44,
+        "Name": "龙井",
+        "SeName": "cat-44",
+        "PictureUrl": "http://img.tea7.com/0011479_0.jpeg?x-oss-process=image/resize,w_150",
+        "ParentCategoryId": 33,
+        "AdGroupKeyWord": null,
+        "SubCategories": []
+    },
+    {
+        "Id": 47,
+        "Name": "云南滇红",
+        "SeName": "cat-47",
+        "PictureUrl": "http://img.tea7.com/0011450_0.jpeg?x-oss-process=image/resize,w_150",
+        "ParentCategoryId": 16,
+        "AdGroupKeyWord": null,
+        "SubCategories": []
+    },
+    {
+        "Id": 30,
+        "Name": "紫砂壶",
+        "SeName": "cat-30",
+        "PictureUrl": "http://img.tea7.com/0011478_0.jpeg?x-oss-process=image/resize,w_150",
+        "ParentCategoryId": 1,
+        "AdGroupKeyWord": null,
+        "SubCategories": []
+    },
+    {
+        "Id": 68,
+        "Name": "建盏",
+        "SeName": "cat-68",
+        "PictureUrl": "http://img.tea7.com/0011239_0.jpeg?x-oss-process=image/resize,w_150",
+        "ParentCategoryId": 1,
+        "AdGroupKeyWord": null,
+        "SubCategories": []
+    },
+    {
+        "Id": 4,
+        "Name": "功夫茶具     ",
+        "SeName": "cat-4",
+        "PictureUrl": "http://img.tea7.com/0011471_0.jpeg?x-oss-process=image/resize,w_150",
+        "ParentCategoryId": 1,
+        "AdGroupKeyWord": null,
+        "SubCategories": []
+    },
+    {
+        "Id": 6,
+        "Name": "茶具电器 ",
+        "SeName": "cat-6",
+        "PictureUrl": "http://img.tea7.com/0011472_0.jpeg?x-oss-process=image/resize,w_150",
+        "ParentCategoryId": 1,
+        "AdGroupKeyWord": null,
+        "SubCategories": []
+    }
+]

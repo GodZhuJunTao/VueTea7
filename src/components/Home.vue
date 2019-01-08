@@ -4,14 +4,18 @@
             <i slot="left" class="logoImg"></i>
             <i class="iconfont icon-xiaoxizhongxin server" slot="right" @click="goto('Server')"></i>
         </mt-header>
-        <input type="text" placeholder="搜索您喜欢的产品">
-        <!-- <div class="carousel">
-            <mt-swipe :auto="4000">
-                <mt-swipe-item v-for="item in recommend" :key="item.id" @click.native="goto('Detail',item.id)">
-                    <img :src="item.images.large"/>
+        <div class="search">
+            <input type="text" placeholder="搜索您喜欢的产品">
+            <i class="iconfont icon-sousuo"></i>
+        </div>
+        <div class="carousel">
+            <mt-swipe :auto="3000">
+                <mt-swipe-item v-for="item in recommend" :key="item.id">
+                    <img :src="item.url"/>
                 </mt-swipe-item>
             </mt-swipe>
-        </div> -->
+        </div>
+        <div>{{dataJson}}</div>
     </div>
 </template>
 <script>
@@ -19,7 +23,25 @@ import { Indicator} from 'mint-ui';
 export default {
     data(){
         return {
-            recommend:[]
+            recommend:[
+                {
+                    id:1,
+                    url:require('@/assets/img/banner1.jpeg')
+                },
+                {
+                    id:2,
+                    url:require('@/assets/img/banner2.jpeg')
+                },
+                {
+                    id:3,
+                    url:require('@/assets/img/banner3.jpeg')
+                },
+                {
+                    id:4,
+                    url:require('@/assets/img/banner4.jpeg')
+                },
+            ],
+            dataJson:[]
         }
     },
     methods:{
@@ -35,7 +57,20 @@ export default {
         }
     },
     created(){
-        
+        this.$axios({
+            method:'post',
+            url:`/dbapi/Category/GetCategoryList`,
+            headers: {'Content-Type': 'application/json;charset=UTF-8'},
+            data:{
+                DisplayPic: true
+            }
+        }).then(res=>{
+            let data = res;
+            this.dataJson = data;
+        }).catch((err)=>{
+            Indicator.close();
+            console.log(err);
+        });
     },
     mounted(){
         //利用App.vue中绑定在原型上的$axios使用axios
@@ -57,22 +92,41 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-    .mint-header{
-        .logoImg{
-            display: block;
-            width: 20px;
-            height: 20px;
-            background:url(../assets/img/logo.jpg) no-repeat;
-            background-size:100%;
+    .page{
+        .mint-header{
+            .logoImg{
+                display: block;
+                width: 20px;
+                height: 20px;
+                background:url(../assets/img/logo.jpg) no-repeat;
+                background-size:100%;
+            }
+            .server{
+                font-size: 22px;
+            }
         }
-        .server{
-            font-size: 22px;
+        .search{
+            box-sizing: border-box;
+            position:fixed;
+            top:10px;
+            left:15%;
+            z-index:2;
+            width:70%;
+            input[type="text"]{
+                box-sizing: inherit;
+                height: 30px;
+                border-radius:15px;
+                width:100%;
+                padding:0 15%;
+            }
+            i{color:#555555;position:absolute;top:50%;left:10px;transform:translateY(-50%);}
         }
-    }
-    .carousel{
-        height: 200px;
-        .mint-swipe-item img{
-            width:100%;
+        .carousel{
+            height: 160px;
+            .mint-swipe-item img{
+                width:100%;
+            }
         }
+
     }
 </style>

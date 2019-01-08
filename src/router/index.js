@@ -13,6 +13,7 @@ import Mine from '@com/Mine';
 import Search from '@com/Search';
 import Master from '@com/Master';
 import Login from '@com/Login';
+import Reg from '@com/Reg';
 import Cart from '@com/Cart';
 import Server from '@com/Server';
 
@@ -71,6 +72,7 @@ const routes = [
     },
     {name:'Master',path:'/Master',component:Master},
     {name:'Login',path:'/login',component:Login},
+    {name:'Reg',path:'/reg',component:Reg},
     {name:'Server',path:'/server',component:Server},
     {path:'/',redirect:{name:'Home'}}  //可直接跳到home目标路由上
 ];

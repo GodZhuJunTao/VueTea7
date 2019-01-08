@@ -6,10 +6,12 @@
       </router-link>
       <mt-button icon="more" slot="right"></mt-button>
     </mt-header>
-    <mt-field placeholder="请输入手机号" type="tel" v-model="phone" class="phone"></mt-field>
-    <mt-field  placeholder="请输入短信验证码" type="tel" v-model="captcha" class="captcha">
-       <p>获取手机验证码</p>
-    </mt-field>
+    <div>
+      <mt-field placeholder="请输入手机号" type="tel" v-model="phone" class="phone"></mt-field>
+      <mt-field placeholder="请输入短信验证码" type="tel" v-model="captcha" class="captcha"></mt-field>
+      <mt-button type="danger" size="normal" class="captchaBtn">获取手机验证码</mt-button>
+      <mt-button type="danger" size="large" class="loginBtn">登录</mt-button>
+    </div>
   </div>
 </template>
 <script>
@@ -22,19 +24,29 @@ export default {
 </script>
 <style>
 .phone {
-  margin-top: 80px;
+  margin-top: 5rem;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: .3125rem;
 }
 
-/* .captcha {
-  padding-right: none;
-  margin-top: 20px;
+.captcha {
+  float: left;
+  width: 65%;
+  height: 2.9375rem;
+  margin-top: 1.25rem;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: .3125rem 0 0 .3125rem;
 }
-.captcha span {
-  color: #fff;
-  background-color: red;
-} */
+.captchaBtn {
+  height: 3rem;
+  width: 35%;
+  float: left;
+  margin-top: 1.25rem;
+  font-size: .875rem;
+  border-radius:  0 .3125rem .3125rem 0;
+}
+.loginBtn{
+    height:3rem;
+    margin-top: 5.5rem
+}
 </style>

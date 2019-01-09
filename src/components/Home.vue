@@ -16,10 +16,13 @@
             </mt-swipe>
         </div>
         <div>{{dataJson}}</div>
+        <BottomBar/>
     </div>
 </template>
 <script>
 import { Indicator} from 'mint-ui';
+import BottomBar from './BottomBar';
+
 export default {
     data(){
         return {
@@ -56,6 +59,7 @@ export default {
             this.$router.push(obj);//可通过path属性进行跳转，path可以传参，name不能传参
         }
     },
+    components:{BottomBar},
     created(){
         this.$axios({
             method:'post',
@@ -93,6 +97,7 @@ export default {
 </script>
 <style lang="scss" scoped>
     .page{
+        margin-top:50px;
         .mint-header{
             .logoImg{
                 display: block;

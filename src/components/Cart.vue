@@ -6,9 +6,11 @@
             <mt-button slot="right">客服</mt-button>
         </mt-header>
         购物车
+        <BottomBar/>
     </div>
 </template>
 <script>
+import BottomBar from './BottomBar';
 export default {
     data(){
         return {
@@ -18,6 +20,11 @@ export default {
     methods:{
         
     },
-
+    components:{BottomBar},
 }
 </script>
+<style lang="scss" scoped>
+    .page{
+        margin-top:50px;
+    }
+</style>

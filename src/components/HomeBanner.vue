@@ -1,0 +1,135 @@
+<template>
+    <div class="home-banner">
+        <div class="carousel">
+            <mt-swipe :auto="3000">
+                <mt-swipe-item v-for="item in recommend" :key="item.id" class="">
+                    <img :src="item.url"/>
+                </mt-swipe-item>
+            </mt-swipe>
+        </div>  
+        <ul class="icon-nav">
+            <li v-for="tab in iconNavTabs" :key="tab.name">
+                <a href="javascript:;">
+                    <img :src="tab.iconPic">
+                    {{tab.name}}
+                </a>
+            </li>
+        </ul>
+        <div class="headline">
+            <div class="news"></div>
+            <div>
+                <ul>
+                    <li v-for="item in  headlineNews" :key="item.idx"><a href="javascript:;">{{item.title}}</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+export default {
+    data(){
+        return {
+            recommend:[
+                {
+                    id:1,
+                    url:require('@/assets/img/banner1.jpeg')
+                },
+                {
+                    id:2,
+                    url:require('@/assets/img/banner2.jpeg')
+                },
+                {
+                    id:3,
+                    url:require('@/assets/img/banner3.jpeg')
+                },
+                {
+                    id:4,
+                    url:require('@/assets/img/banner4.jpeg')
+                },
+            ],
+            iconNavTabs:[
+                {
+                    iconPic:require('@/assets/img/icon_nav1.png'),
+                    name:'自饮茶'
+                },
+                {
+                    iconPic:require('@/assets/img/icon_nav2.png'),
+                    name:'茶具'
+                },
+                {
+                    iconPic:require('@/assets/img/icon_nav3.png'),
+                    name:'茶礼盒'
+                },
+                {
+                    iconPic:require('@/assets/img/icon_nav4.png'),
+                    name:'领福利'
+                },
+                {
+                    iconPic:require('@/assets/img/icon_nav5.png'),
+                    name:'官方验证'
+                },
+            ],
+            headlineNews:[
+                {
+                    title:"岩茶为何不提春茶概念",
+                    idx:0
+                },
+                {
+                    title:"重要公告|真假客服官方验证功能上线",
+                    idx:1
+                }
+            ]
+        }
+    }
+}
+</script>
+
+<style lang="scss" scoped>
+.carousel{
+    height: 140px;
+    .mint-swipe-item img{
+        width:100%;
+    }
+}
+.icon-nav{
+    display: flex;
+    justify-content:space-around;
+    height: 60px;
+    padding:15px 0;
+    li{
+        display: flex;
+        justify-content:space-between;
+        flex-direction:column;
+        a{
+            font-size:12px;
+            text-align:center;
+            img{
+                display:block;
+                height: 32px;
+                width: 32px;
+                padding:0 13px 10px;
+            }
+        }
+    }
+}
+.headline{
+    height: 16px;
+    padding:10px 6px;
+    .news{
+        height: 16px;
+        width: 59px;
+        margin-right:5px;
+        background:url(../assets/img/headline.png) no-repeat 10px 6px;
+        background-size: contain;
+    }
+    div{
+        ul{
+            li a{
+                font-size:12px;
+
+            }
+        }
+    }
+}
+</style>

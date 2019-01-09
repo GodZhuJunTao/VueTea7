@@ -25,6 +25,6 @@ export default {
 </script>
 <style lang="scss" scoped>
     .page{
-        margin-top:50px;
+        margin-top:3.125rem;
     }
 </style>

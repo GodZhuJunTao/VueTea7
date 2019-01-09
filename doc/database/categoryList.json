@@ -5,8 +5,7 @@
         "SeName": "绿茶",
         "PictureUrl": "http://img.tea7.com/0011375_0.jpeg",
         "ParentCategoryId": 0,
-        "AdGroupKeyWord": null,
-        "SubCategories": []
+        "AdGroupKeyWord": null
     },
     {
         "Id": 38,
@@ -14,8 +13,7 @@
         "SeName": "乌龙",
         "PictureUrl": "http://img.tea7.com/0011383_0.jpeg",
         "ParentCategoryId": 0,
-        "AdGroupKeyWord": null,
-        "SubCategories": []
+        "AdGroupKeyWord": null
     },
     {
         "Id": 16,
@@ -23,8 +21,7 @@
         "SeName": "红茶",
         "PictureUrl": "http://img.tea7.com/0011377_0.jpeg",
         "ParentCategoryId": 0,
-        "AdGroupKeyWord": null,
-        "SubCategories": []
+        "AdGroupKeyWord": null
     },
     {
         "Id": 19,
@@ -32,8 +29,7 @@
         "SeName": "白茶",
         "PictureUrl": "http://img.tea7.com/0011378_0.jpeg",
         "ParentCategoryId": 0,
-        "AdGroupKeyWord": null,
-        "SubCategories": []
+        "AdGroupKeyWord": null
     },
     {
         "Id": 35,
@@ -41,8 +37,7 @@
         "SeName": "普洱",
         "PictureUrl": "http://img.tea7.com/0011379_0.jpeg",
         "ParentCategoryId": 0,
-        "AdGroupKeyWord": null,
-        "SubCategories": []
+        "AdGroupKeyWord": null
     },
     {
         "Id": 43,
@@ -50,8 +45,7 @@
         "SeName": "花茶",
         "PictureUrl": "http://img.tea7.com/0011380_0.jpeg",
         "ParentCategoryId": 0,
-        "AdGroupKeyWord": null,
-        "SubCategories": []
+        "AdGroupKeyWord": null
     },
     {
         "Id": 1,
@@ -59,8 +53,7 @@
         "SeName": "茶具",
         "PictureUrl": "http://img.tea7.com/0011381_0.jpeg",
         "ParentCategoryId": 0,
-        "AdGroupKeyWord": null,
-        "SubCategories": []
+        "AdGroupKeyWord": null
     },
     {
         "Id": 72,
@@ -68,7 +61,6 @@
         "SeName": "手艺",
         "PictureUrl": "http://img.tea7.com/0011382_0.jpeg",
         "ParentCategoryId": 0,
-        "AdGroupKeyWord": null,
-        "SubCategories": []
+        "AdGroupKeyWord": null
     }
 ]

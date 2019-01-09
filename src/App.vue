@@ -1,12 +1,6 @@
 <template>
     <div id="container">
         <router-view/>
-        <!-- <mt-tabbar v-model="selected" fixed>
-            <mt-tab-item v-for="tab in tabs" :key="tab.name" :id="tab.name" @click.native="goto(tab.path)">
-                <i slot="icon" :class="tab.icon" class="homeIcon"></i>
-                {{tab.text}}
-            </mt-tab-item>
-        </mt-tabbar> -->
     </div>
 </template>
 <script>
@@ -18,7 +12,7 @@ Vue.use(MintUI);
 import 'mint-ui/lib/style.css';
 
 // 引入并使用cube-ui
-import Cube from 'cube-ui'
+import Cube from 'cube-ui';
 Vue.use(Cube)
 
 // 引入common.scss
@@ -55,14 +49,9 @@ axios.interceptors.response.use(data=>{
 export default {
     data(){
         return {
-            // tabs:this.$store.state.tabs,
-            // selected:this.$store.state.selected
         }
     },
     methods:{
-        // goto(path){
-        //     this.$router.push({path});
-        // }
     }
 }
 </script>

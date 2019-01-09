@@ -8,43 +8,65 @@
             <input type="text" placeholder="搜索您喜欢的产品">
             <i class="iconfont icon-sousuo"></i>
         </div>
-        <div class="carousel">
-            <mt-swipe :auto="3000">
-                <mt-swipe-item v-for="item in recommend" :key="item.id">
-                    <img :src="item.url"/>
-                </mt-swipe-item>
-            </mt-swipe>
+        <div class="main">
+            <div class="homeTabs">
+                <cube-scroll
+                ref="scroll"
+                :data="topTabs"
+                direction="horizontal"
+                class="horizontal-scroll-list-wrap">
+                    <ul class="list-wrapper">
+                        <li v-for="item in topTabs" class="list-item" :key="item.label"><a href="javascript:;" :class="{active:item.label==selectedLabel}">{{ item.label }}</a></li>
+                    </ul>
+                </cube-scroll>
+            </div>
+            <HomeBanner/>
         </div>
-        <div>{{dataJson}}</div>
+        
         <BottomBar/>
     </div>
 </template>
 <script>
 import { Indicator} from 'mint-ui';
+// 轮播图组件
+import HomeBanner from './HomeBanner';
+// 底部选项卡组件
 import BottomBar from './BottomBar';
+import '@/sass/home.scss';
 
 export default {
     data(){
         return {
-            recommend:[
+            selectedLabel: '推荐',
+            topTabs: [
                 {
-                    id:1,
-                    url:require('@/assets/img/banner1.jpeg')
-                },
-                {
-                    id:2,
-                    url:require('@/assets/img/banner2.jpeg')
-                },
-                {
-                    id:3,
-                    url:require('@/assets/img/banner3.jpeg')
-                },
-                {
-                    id:4,
-                    url:require('@/assets/img/banner4.jpeg')
-                },
+                    label: '推荐'
+                }, {
+                    label: '金骏眉'
+                }, {
+                    label: '武夷岩茶'
+                }, {
+                    label: '紫砂壶'
+                }, {
+                    label: '龙井'
+                }, {
+                    label: '漳平水仙'
+                }, {
+                    label: '茉莉花茶'
+                }, {
+                    label: '采茶'
+                }, {
+                    label: '铁观音'
+                }, {
+                    label: '碧螺春'
+                }, {
+                    label: '正山小种'
+                }, {
+                    label: '功夫茶具'
+                }, {
+                    label: '建盏'
+                }
             ],
-            dataJson:[]
         }
     },
     methods:{
@@ -57,24 +79,18 @@ export default {
                 obj.params = {id}
             }
             this.$router.push(obj);//可通过path属性进行跳转，path可以传参，name不能传参
+        },
+        clickHandler (label) {
+            // if you clicked home tab, then print 'Home'
+            console.log(label)
+        },
+        changeHandler (label) {
+            // if you clicked different tab, this methods can be emitted
         }
     },
-    components:{BottomBar},
+    components:{BottomBar,HomeBanner},
     created(){
-        this.$axios({
-            method:'post',
-            url:`/dbapi/Category/GetCategoryList`,
-            headers: {'Content-Type': 'application/json;charset=UTF-8'},
-            data:{
-                DisplayPic: true
-            }
-        }).then(res=>{
-            let data = res;
-            this.dataJson = data;
-        }).catch((err)=>{
-            Indicator.close();
-            console.log(err);
-        });
+        
     },
     mounted(){
         //利用App.vue中绑定在原型上的$axios使用axios
@@ -97,7 +113,7 @@ export default {
 </script>
 <style lang="scss" scoped>
     .page{
-        margin-top:50px;
+        margin-top:93px;
         .mint-header{
             .logoImg{
                 display: block;
@@ -126,12 +142,7 @@ export default {
             }
             i{color:#555555;position:absolute;top:50%;left:10px;transform:translateY(-50%);}
         }
-        .carousel{
-            height: 160px;
-            .mint-swipe-item img{
-                width:100%;
-            }
-        }
+        
 
     }
 </style>

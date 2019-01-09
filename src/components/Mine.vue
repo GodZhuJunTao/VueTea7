@@ -1,5 +1,5 @@
 <template>
-    <div class="MineTop">
+    <div class="page">
 
     </div>
 </template>
@@ -9,7 +9,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-    .MineTop{
+    .page{
         height:10rem;
         background:url(../assets/img/cbtopbg.jpg);
         background-size:200%;

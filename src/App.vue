@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div id="container">
         <router-view/>
         <mt-tabbar v-model="selected" fixed>
             <mt-tab-item v-for="tab in tabs" :key="tab.name" :id="tab.name" @click.native="goto(tab.path)">
@@ -98,7 +98,7 @@ export default {
 }
 </script>
 <style lang="scss">
-    .container{
+    #container{
         padding-top:50px;
         .mint-header.is-fixed{
             background-color:#b0352f;

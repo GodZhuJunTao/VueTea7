@@ -1,12 +1,12 @@
 <template>
     <div id="container">
         <router-view/>
-        <mt-tabbar v-model="selected" fixed>
+        <!-- <mt-tabbar v-model="selected" fixed>
             <mt-tab-item v-for="tab in tabs" :key="tab.name" :id="tab.name" @click.native="goto(tab.path)">
                 <i slot="icon" :class="tab.icon" class="homeIcon"></i>
                 {{tab.text}}
             </mt-tab-item>
-        </mt-tabbar>
+        </mt-tabbar> -->
     </div>
 </template>
 <script>
@@ -55,51 +55,19 @@ axios.interceptors.response.use(data=>{
 export default {
     data(){
         return {
-            tabs:[
-                {
-                    text:'首页',
-                    icon:'iconfont icon-home',
-                    path:'/home',
-                    name:'Home'
-                },
-                {
-                    text:'列表',
-                    icon:'iconfont icon-circle',
-                    path:'/list',
-                    name:'List'
-                },
-                {
-                    text:'购物车',
-                    icon:'iconfont icon-cart',
-                    path:'/cart',
-                    name:'Cart'
-                },
-                {
-                    text:'茶师茶',
-                    icon:'iconfont icon-leaves01',
-                    path:'/master',
-                    name:'Master'
-                },
-                {
-                    text:'我的',
-                    icon:'iconfont icon-mine',
-                    path:'/mine',
-                    name:'Mine'
-                },
-            ],
-            selected:'Home'
+            // tabs:this.$store.state.tabs,
+            // selected:this.$store.state.selected
         }
     },
     methods:{
-        goto(path){
-            this.$router.push({path});
-        }
+        // goto(path){
+        //     this.$router.push({path});
+        // }
     }
 }
 </script>
 <style lang="scss">
     #container{
-        padding-top:50px;
         .mint-header.is-fixed{
             background-color:#b0352f;
             height:50px;

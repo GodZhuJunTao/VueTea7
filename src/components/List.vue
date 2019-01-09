@@ -5,9 +5,11 @@
             <mt-button icon="search" slot="right"></mt-button>
         </mt-header>
         列表页
+        <BottomBar/>
     </div>
 </template>
 <script>
+import BottomBar from './BottomBar';
 export default {
     data(){
         return {
@@ -17,12 +19,11 @@ export default {
     methods:{
         
     },
-
-    //监听数据：数据有修改自动执行
-    watch:{
-        
-    },
-    mounted(){
-    }
+    components:{BottomBar},
 }
 </script>
+<style lang="scss" scoped>
+    .page{
+        margin-top:50px;
+    }
+</style>

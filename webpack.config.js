@@ -10,7 +10,7 @@ const TransformModulesPlugin = require('webpack-transform-modules-plugin')
 module.exports = {
     // 入口文件
     entry:{
-        main:'./src/index.js',
+        main:'./src/main.js',
     },
 
     // 出口：打包文件放置的目录

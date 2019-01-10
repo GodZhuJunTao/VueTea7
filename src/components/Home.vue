@@ -21,6 +21,7 @@
                 </cube-scroll>
             </div>
             <HomeBanner/>
+            <HomeCommend/>
         </div>
         
         <BottomBar/>
@@ -32,6 +33,9 @@ import { Indicator} from 'mint-ui';
 import HomeBanner from './HomeBanner';
 // 底部选项卡组件
 import BottomBar from './BottomBar';
+// 小七推荐组件
+import HomeCommend from './HomeCommend';
+
 import '@/sass/home.scss';
 
 export default {
@@ -80,15 +84,8 @@ export default {
             }
             this.$router.push(obj);//可通过path属性进行跳转，path可以传参，name不能传参
         },
-        clickHandler (label) {
-            // if you clicked home tab, then print 'Home'
-            console.log(label)
-        },
-        changeHandler (label) {
-            // if you clicked different tab, this methods can be emitted
-        }
     },
-    components:{BottomBar,HomeBanner},
+    components:{BottomBar,HomeBanner,HomeCommend},
     created(){
         
     },
@@ -113,7 +110,9 @@ export default {
 </script>
 <style lang="scss" scoped>
     .page{
-        margin-top:93px;
+        background:#f5f5f5;
+        margin-top:92px;
+        margin-bottom:50px;
         .mint-header{
             .logoImg{
                 display: block;

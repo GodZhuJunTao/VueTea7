@@ -17,8 +17,8 @@
         </ul>
         <div class="headline">
             <div class="news"></div>
-            <div>
-                <ul>
+            <div class="news-banner">
+                <ul ref="newsUl">
                     <li v-for="item in  headlineNews" :key="item.idx"><a href="javascript:;">{{item.title}}</a></li>
                 </ul>
             </div>
@@ -81,53 +81,95 @@ export default {
                 }
             ]
         }
+    },
+    methods:{
+        changeNews(){
+            var ulTimer;
+            clearInterval(ulTimer);
+            ulTimer = setInterval(()=>{
+                var prevItem = this.headlineNews[0];
+                this.headlineNews.shift();
+                this.headlineNews.push(prevItem);
+                this.$refs.newsUl.style.top = 0;
+                var newsTimer;
+                clearInterval(newsTimer);
+                newsTimer = setInterval(()=>{
+                    var cur = parseInt(getComputedStyle(this.$refs.newsUl,false).top);
+                    if(cur > -16){
+                        this.$refs.newsUl.style.top = cur - 1 + "px";
+                    }else{
+                        clearInterval(newsTimer);
+                    }
+                },30);
+            },4000);
+        }
+    },
+    mounted(){
+        this.changeNews();
+        
     }
 }
 </script>
 
 <style lang="scss" scoped>
-.carousel{
-    height: 140px;
-    .mint-swipe-item img{
-        width:100%;
+.home-banner{
+    background: #fff;
+    margin-bottom:10px;
+    .carousel{
+        height: 140px;
+        .mint-swipe-item img{
+            width:100%;
+        }
     }
-}
-.icon-nav{
-    display: flex;
-    justify-content:space-around;
-    height: 60px;
-    padding:15px 0;
-    li{
+    .icon-nav{
         display: flex;
-        justify-content:space-between;
-        flex-direction:column;
-        a{
-            font-size:12px;
-            text-align:center;
-            img{
-                display:block;
-                height: 32px;
-                width: 32px;
-                padding:0 13px 10px;
+        justify-content:space-around;
+        height: 60px;
+        padding:15px 0;
+        li{
+            display: flex;
+            justify-content:space-between;
+            flex-direction:column;
+            a{
+                font-size:12px;
+                text-align:center;
+                img{
+                    display:block;
+                    height: 32px;
+                    width: 32px;
+                    padding:0 13px 10px;
+                }
             }
         }
     }
-}
-.headline{
-    height: 16px;
-    padding:10px 6px;
-    .news{
+    .headline{
+        display:flex;
         height: 16px;
-        width: 59px;
-        margin-right:5px;
-        background:url(../assets/img/headline.png) no-repeat 10px 6px;
-        background-size: contain;
-    }
-    div{
-        ul{
-            li a{
-                font-size:12px;
-
+        padding:10px 6px;
+        .news{
+            height: 16px;
+            width: 64px;
+            margin-right:13px;
+            background:url(../assets/img/headline.png) no-repeat center center;
+            background-size: contain;
+        }
+        .news-banner{
+            height: 16px;
+            flex:1;
+            overflow: hidden;
+            position:relative;
+            ul{
+                position:absolute;
+                top:0;
+                left:0;
+                li{
+                    height: 16px;
+                    a{
+                        vertical-align:top;
+                        font-size:12px;
+                        line-height: 16px;
+                    } 
+                } 
             }
         }
     }

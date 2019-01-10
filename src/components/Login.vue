@@ -35,7 +35,7 @@ export default {
   padding: 0 .9375rem;
 }
 .phone {
-  margin-top: 3rem;
+  margin-top: 5rem;
   border: 1px solid #ccc;
   border-radius: .3125rem;
 }
@@ -54,13 +54,15 @@ export default {
   float: left;
   background-color: #b0352f;
   margin-top: 1.25rem;
-  font-size: .875rem;
+  font-size: .8rem;
   border-radius:  0 .3125rem .3125rem 0;
 }
 .loginBtn{
     height:3rem;
     margin-top: 5.5rem;
     background-color: #b0352f;
+    font-size: .8rem;
+    font-weight: 700;
 }
 .codeLogin{
   float:left;
@@ -75,7 +77,7 @@ export default {
 }
 .quickReg{
   float:right;
-  font-size:0.8rem;
+  font-size: .8rem;
   margin-top:1.3rem;
   padding-right:.625rem;
   color: #222;

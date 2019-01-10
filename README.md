@@ -29,6 +29,16 @@
 └── src							源文件
     ├── assets						资源
     ├── components					模块
+    │   ├── Home.vue					首页模块
+    │   │   ├── HomeBanner.vue				首页轮播图模块
+    │   │   ├── HomeCommend.vue				首页小七推荐模块
+    │   ├── List.vue					列表页模块
+    │   ├── Cart.vue					购物车页模块
+    │   ├── Master.vue					茶师茶页模块
+    │   ├── Mine.vue					我的模块
+    │   ├── Login.vue					登录页模块
+    │   ├── Reg.vue						注册页模块
+    │   └── BottomBar.vue				底部导航栏模块
     ├── router						路由
     ├── sass						sass文件
     ├── App.vue						项目入口组件

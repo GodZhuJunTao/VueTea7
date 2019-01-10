@@ -22,6 +22,7 @@
             </div>
             <HomeBanner/>
             <HomeCommend/>
+            <HomePromotion/>
         </div>
         
         <BottomBar/>
@@ -35,6 +36,8 @@ import HomeBanner from './HomeBanner';
 import BottomBar from './BottomBar';
 // 小七推荐组件
 import HomeCommend from './HomeCommend';
+// 今日特价组件
+import HomePromotion from './HomePromotion';
 
 import '@/sass/home.scss';
 
@@ -85,7 +88,7 @@ export default {
             this.$router.push(obj);//可通过path属性进行跳转，path可以传参，name不能传参
         },
     },
-    components:{BottomBar,HomeBanner,HomeCommend},
+    components:{BottomBar,HomeBanner,HomeCommend,HomePromotion},
     created(){
         
     },

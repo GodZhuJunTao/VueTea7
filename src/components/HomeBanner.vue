@@ -90,17 +90,21 @@ export default {
                 var prevItem = this.headlineNews[0];
                 this.headlineNews.shift();
                 this.headlineNews.push(prevItem);
-                this.$refs.newsUl.style.top = 0;
-                var newsTimer;
-                clearInterval(newsTimer);
-                newsTimer = setInterval(()=>{
-                    var cur = parseInt(getComputedStyle(this.$refs.newsUl,false).top);
-                    if(cur > -16){
-                        this.$refs.newsUl.style.top = cur - 1 + "px";
-                    }else{
-                        clearInterval(newsTimer);
-                    }
-                },30);
+                if(this.$refs.newsUl){
+                    this.$refs.newsUl.style.top = 0;
+                    var newsTimer;
+                    clearInterval(newsTimer);
+                    newsTimer = setInterval(()=>{
+                        var cur = parseInt(getComputedStyle(this.$refs.newsUl,false).top);
+                        if(cur > -16){
+                            this.$refs.newsUl.style.top = cur - 1 + "px";
+                        }else{
+                            clearInterval(newsTimer);
+                        }
+                    },30);
+                }else{
+                    clearInterval(ulTimer);
+                }
             },4000);
         }
     },

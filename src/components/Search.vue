@@ -6,16 +6,6 @@
             autofocus
             @input="search"
             placeholder="搜索">
-            <mt-cell v-for="item in result" :key="item.id" @click.native="goto(item.id)">
-                <span class="pic"><img :src="item.images.small"/></span>
-                <div>
-                    <h4>{{item.title}}</h4>
-                    <p>年份：{{item.year}}</p>
-                    <p>类型：{{item.genres.map(item=>item.name).join()}}</p>
-                    <p>导演：{{item.directors.map(item=>item.name).join()}}</p>
-                    <p>演员：{{item.casts.map(item=>item.name).join()}}</p>
-                </div>
-            </mt-cell>
         </mt-search>
     </div>
 </template>
@@ -62,12 +52,4 @@ export default {
 }
 </script>
 <style lang="scss">
-    .search-list{
-        img{height:90px;width:60px;}
-        .pic{margin-right:10px;}
-        .mint-cell-value{
-            width:100%;font-size:12px;
-            p{margin:2px 0;}
-        }
-    } 
 </style>

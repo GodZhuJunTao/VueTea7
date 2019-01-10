@@ -1,8 +1,6 @@
 <template>
     <div class="commend">
-        <p>
-            <span>小七推荐</span>    
-        </p>
+        <HomeTitle>小七推荐</HomeTitle>
         <ul class="commend-list">
             <li v-for="item in commendList" :key="item.title">
                 <div>
@@ -16,6 +14,7 @@
 </template>
 
 <script>
+import HomeTitle from './HomeTitle';
 export default {
     data(){
         return {
@@ -42,7 +41,8 @@ export default {
                 },
             ]
         }
-    }
+    },
+    components:{HomeTitle}
 }
 </script>
 
@@ -54,33 +54,6 @@ export default {
         justify-content:space-around;
         // height: 240px;
         background: #fff;
-        &>p{
-            height: 40px;
-            text-align:center;
-            span{
-                position:relative;
-                font-size:14px;
-                line-height:40px;
-                font-weight:bolder;
-            }
-            span::before,span::after{
-                content: "";
-                position: absolute;
-                width: 8px;
-                height: 8px;
-                border-radius: 50%;
-                display: block;
-                background: #d4c0a7;
-                top: 50%;
-                margin-top: -4px;
-            }
-            span::before{
-                left:-15px;
-            }
-            span::after{
-                right:-15px;
-            }
-        }
         .commend-list{
             display:flex;
             flex-wrap:wrap;

@@ -3,6 +3,8 @@
     top:50px;
     left:0;
     width:100%;
+    z-index:10;
+    background:#fff;
     .horizontal-scroll-list-wrap{
         .cube-scroll-content{
             display: inline-block;

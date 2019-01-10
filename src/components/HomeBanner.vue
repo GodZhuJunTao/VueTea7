@@ -17,8 +17,8 @@
         </ul>
         <div class="headline">
             <div class="news"></div>
-            <div>
-                <ul>
+            <div class="news-banner">
+                <ul ref="newsUl">
                     <li v-for="item in  headlineNews" :key="item.idx"><a href="javascript:;">{{item.title}}</a></li>
                 </ul>
             </div>
@@ -81,6 +81,20 @@ export default {
                 }
             ]
         }
+    },
+    methods:{
+        changeNews(){
+            var newsTimer;
+            clearInterval(newsTimer);
+            newsTimer = setInterval(()=>{
+                
+            },30);
+        }
+    },
+    mounted(){
+        // this.changeNews();
+        var cur = parseInt(getComputedStyle(this.$refs.newsUl,false).top);
+        console.log(cur);
     }
 }
 </script>
@@ -114,21 +128,31 @@ export default {
     }
 }
 .headline{
+    display:flex;
     height: 16px;
     padding:10px 6px;
     .news{
         height: 16px;
-        width: 59px;
-        margin-right:5px;
-        background:url(../assets/img/headline.png) no-repeat 10px 6px;
+        width: 64px;
+        margin-right:13px;
+        background:url(../assets/img/headline.png) no-repeat center center;
         background-size: contain;
     }
-    div{
+    .news-banner{
+        height: 16px;
+        flex:1;
+        overflow: hidden;
+        position:relative;
         ul{
-            li a{
-                font-size:12px;
-
-            }
+            position:absolute;
+            top:0;
+            left:0;
+            li{
+                
+                a{flex-shrink: 0;
+                    font-size:12px;
+                } 
+            } 
         }
     }
 }

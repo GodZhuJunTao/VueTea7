@@ -37,7 +37,7 @@ export default {
   padding: 0 .9375rem;
 }
 .phone {
-  margin-top: 3rem;
+  margin-top: 5rem;
   border: 1px solid #ccc;
   border-radius: .3125rem;
 }
@@ -56,7 +56,7 @@ export default {
   float: left;
   background-color: #b0352f;
   margin-top: 1.25rem;
-  font-size: .875rem;
+  font-size: .8rem;
   border-radius:  0 .3125rem .3125rem 0;
 }
 .setPassword{
@@ -73,6 +73,8 @@ export default {
     height:3rem;
     margin-top: 1.25rem;
     background-color: #b0352f;
+    font-size: .8rem;
+    font-weight: 800;
 }
 .protocol{
     margin-top: 1.25rem;

@@ -10,6 +10,11 @@
                     <p :class="{active:true}">{{item.name}}</p> 
                </li>   
             </ul>
+            <div class="order">
+                <p class="myOrder"><span class="iconfont icon-icon_order"></span>我的订单</p>
+                <p class="allOrder">全部订单 ></p>
+            </div>
+            
         </div>
     <BottomBar/>
     </div>
@@ -45,24 +50,30 @@ export default {
 </script>
 <style lang="scss" scoped>
     .page{
-       background-color: #f5f5f5; 
+        height:100%;
+        display: flex;
+        flex-direction: column;
+        background-color: #f5f5f5; 
     }
     .MineTop{
         display: flex;
         justify-content: center;
-        height:200px;
+        height:25%;
         background:url(../assets/img/cbtopbg.jpg);
         .Btn{
+            height:30px;
+            width:90px;
             background: rgba(255, 181, 0, 0.9);
             color: #fff;
             align-self:center;
+            font-size:12px;
         }
     }
     .MineCentent{
-        background-color: #ffffff;
+        
         .uList{
            display: flex;
-           margin-bottom: 10px;
+           background-color: #ffffff;
            li{
                flex:1;
                flex-direction: column;
@@ -72,6 +83,11 @@ export default {
                }
                .active{color:rgb(148, 144, 144);}
            }
+        }
+        .order{
+            display:flex;
+            margin-top: 10px;
+            background-color: #ffffff;
         }
     }
 </style>

@@ -84,17 +84,29 @@ export default {
     },
     methods:{
         changeNews(){
-            var newsTimer;
-            clearInterval(newsTimer);
-            newsTimer = setInterval(()=>{
-                
-            },30);
+            var ulTimer;
+            clearInterval(ulTimer);
+            ulTimer = setInterval(()=>{
+                var prevItem = this.headlineNews[0];
+                this.headlineNews.shift();
+                this.headlineNews.push(prevItem);
+                this.$refs.newsUl.style.top = 0;
+                var newsTimer;
+                clearInterval(newsTimer);
+                newsTimer = setInterval(()=>{
+                    var cur = parseInt(getComputedStyle(this.$refs.newsUl,false).top);
+                    if(cur >= -16){
+                        this.$refs.newsUl.style.top = cur - 1 + "px";
+                    }else{
+                        clearInterval(newsTimer);
+                    }
+                },30);
+            },4000);
         }
     },
     mounted(){
-        // this.changeNews();
-        var cur = parseInt(getComputedStyle(this.$refs.newsUl,false).top);
-        console.log(cur);
+        this.changeNews();
+        
     }
 }
 </script>
@@ -148,9 +160,11 @@ export default {
             top:0;
             left:0;
             li{
-                
-                a{flex-shrink: 0;
+                height: 16px;
+                a{
+                    vertical-align:top;
                     font-size:12px;
+                    line-height: 16px;
                 } 
             } 
         }

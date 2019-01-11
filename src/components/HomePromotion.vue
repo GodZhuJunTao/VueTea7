@@ -30,6 +30,7 @@ export default {
     display:flex;
     flex-direction:column;
     align-items:center;
+    margin-bottom:17px;
     .promot-title{
         height: 40px;
         width: 100%;

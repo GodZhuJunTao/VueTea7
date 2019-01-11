@@ -21,6 +21,11 @@ import './sass/common.scss';
 // 引入字体图标
 import './assets/iconfont/iconfont.css';
 
+//引入title插件
+import theTitle from '@/plugins/theTitle';
+//使用插件
+Vue.use(theTitle);
+
 import axios from 'axios';
 //把axios写入Vue的原型对象，后面方便调用
 Vue.prototype.$axios = axios;

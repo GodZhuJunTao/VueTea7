@@ -33,11 +33,13 @@
         </li>
       </ul>
     </div>
+    <HomeTitle class="HomeTitle">猜你喜欢</HomeTitle>
     <BottomBar/>
   </div>
 </template>
 <script>
 import BottomBar from "./BottomBar";
+import HomeTitle from './HomeTitle';
 export default {
   data() {
     return {
@@ -104,7 +106,7 @@ export default {
   },
   methods: {},
 
-  components: { BottomBar }
+  components: { BottomBar,HomeTitle }
 };
 </script>
 <style lang="scss" scoped>
@@ -114,6 +116,12 @@ export default {
   flex-direction: column;
   background-color: #f5f5f5;
   font-size: 13px;
+  margin-bottom: 60px;
+  .HomeTitle{
+      background-color: #ffffff;
+      margin-top:5px;
+      font-weight: 100;
+  }
 }
 .MineTop {
   display: flex;

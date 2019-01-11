@@ -111,9 +111,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 .page {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
   background-color: #f5f5f5;
   font-size: 13px;
   margin-bottom: 60px;
@@ -126,7 +123,7 @@ export default {
 .MineTop {
   display: flex;
   justify-content: center;
-  height: 25%;
+  height: 190px;
   background: url(../assets/img/cbtopbg.jpg);
   .Btn {
     height: 30px;
@@ -173,10 +170,12 @@ export default {
     ul{
          display: flex;
         li{
-            flex: 1;
             flex-direction: column;
             text-align: center;
             padding: 10px 20px;
+            span{
+              font-size:22px;
+            }
         }
     }
   }
@@ -185,8 +184,10 @@ export default {
       background-color: #ffffff;
       li{
         display: flex;
+        height:40px;
+        line-height: 40px;
         justify-content: space-between;
-        padding: 12px 12px;
+        padding: 0 12px;
         border-top:1px solid #cccdda;
         p{
           span{

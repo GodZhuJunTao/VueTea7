@@ -29,6 +29,7 @@ html{
 
 body,html{
     height: 100%;
+    touch-action: none;//当你触摸并按住触摸目标时候，禁止系统默认菜单
 }
 a{color:#666666;}
 #container{

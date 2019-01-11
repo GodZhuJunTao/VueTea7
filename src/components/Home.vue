@@ -23,6 +23,8 @@
             <HomeBanner/>
             <HomeCommend/>
             <HomePromotion/>
+            <HomeCate :cateList="homeCatePot.goodslist" :imgUrl="homeCatePot.img"/>
+            <HomeCate :cateList="homeCateBai.goodslist" :imgUrl="homeCateBai.img"/>
         </div>
         <BottomBar/>
     </div>
@@ -37,6 +39,8 @@ import BottomBar from './BottomBar';
 import HomeCommend from './HomeCommend';
 // 今日特价组件
 import HomePromotion from './HomePromotion';
+// 一类产品组件
+import HomeCate from './HomeCate';
 
 import '@/sass/home.scss';
 
@@ -73,6 +77,14 @@ export default {
                     label: '建盏'
                 }
             ],
+            homeCatePot:{
+                goodslist:[],
+                img:require('@/assets/img/home_cate1.jpg')
+            },
+            homeCateBai:{
+                goodslist:[],
+                img:require('@/assets/img/home_cate2.jpg')
+            },
         }
     },
     methods:{
@@ -87,9 +99,42 @@ export default {
             this.$router.push(obj);//可通过path属性进行跳转，path可以传参，name不能传参
         },
     },
-    components:{BottomBar,HomeBanner,HomeCommend,HomePromotion},
+    components:{BottomBar,HomeBanner,HomeCommend,HomePromotion,HomeCate},
     created(){
-        
+        this.$axios({
+            method:'get',
+            url:`/dbapi/Product/GetProducts`,
+            params:{
+                PageIndex: 0,
+                PageSize: 10,
+                ParentCategoryId: 30,
+                ProductTagIdsStr: '',
+                ProductTypeId: 1
+            }
+        }).then(res=>{
+            let data = res.data;
+            this.homeCatePot.goodslist = data.Products;
+        }).catch((err)=>{
+            // Indicator.close();
+            console.log(err);
+        });
+        this.$axios({
+            method:'get',
+            url:`/dbapi/Product/GetProducts`,
+            params:{
+                PageIndex: 0,
+                PageSize: 10,
+                ParentCategoryId: 20,
+                ProductTagIdsStr: '',
+                ProductTypeId: 1
+            }
+        }).then(res=>{
+            let data = res.data;
+            this.homeCateBai.goodslist = data.Products;
+        }).catch((err)=>{
+            // Indicator.close();
+            console.log(err);
+        });
     },
     mounted(){
         //利用App.vue中绑定在原型上的$axios使用axios
@@ -116,6 +161,7 @@ export default {
         margin-top:92px;
         margin-bottom:50px;
         .mint-header{
+            z-index:10;
             .logoImg{
                 display: block;
                 width: 20px;
@@ -132,7 +178,7 @@ export default {
             position:fixed;
             top:10px;
             left:15%;
-            z-index:2;
+            z-index:11;
             width:70%;
             input[type="text"]{
                 box-sizing: inherit;

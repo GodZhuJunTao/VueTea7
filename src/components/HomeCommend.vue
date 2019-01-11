@@ -1,6 +1,6 @@
 <template>
     <div class="commend">
-        <HomeTitle>小七推荐</HomeTitle>
+        <theTitle>小七推荐</theTitle>
         <ul class="commend-list">
             <li v-for="item in commendList" :key="item.title">
                 <div>
@@ -14,7 +14,6 @@
 </template>
 
 <script>
-import HomeTitle from './HomeTitle';
 export default {
     data(){
         return {
@@ -41,8 +40,7 @@ export default {
                 },
             ]
         }
-    },
-    components:{HomeTitle}
+    }
 }
 </script>
 

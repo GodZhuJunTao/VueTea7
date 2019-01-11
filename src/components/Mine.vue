@@ -20,12 +20,18 @@
       </div>
       <div class="todoList">
         <ul>
-          <li>
-            <span class="iconfont icon-leaves01"></span>
-            <p>待付款</p>
+          <li v-for="item in todoTbas" :key="item.text">
+            <span :class="item.icon"></span>
+            <p>{{item.text}}</p>
           </li>
         </ul>
       </div>
+      <ul class="other">
+        <li v-for="item in otherTbas" :key="item.text">
+            <p><span :class="item.icon"></span>{{item.text}}</p>
+            <i class="iconfont icon-right-line"></i>
+        </li>
+      </ul>
     </div>
     <BottomBar/>
   </div>
@@ -52,6 +58,47 @@ export default {
           name: "足迹",
           num: "1"
         }
+      ],
+      todoTbas:[
+          {
+              text:'待付款',
+              icon:'iconfont icon-icon'
+          },
+          {
+              text:'待发货',
+              icon:'iconfont icon-daifahuo'
+          },
+          {
+              text:'待收货',
+              icon:'iconfont icon-daishouhuo'
+          },
+          {
+              text:'待评价',
+              icon:'iconfont icon-daipingjia'
+          }
+          
+      ],
+      otherTbas:[
+          {
+              text:'地址管理',
+              icon:'iconfont icon-dizhi-01'
+          },
+           {
+              text:'我的客服',
+              icon:'iconfont icon-kefu'
+          },
+           {
+              text:'意见反馈',
+              icon:'iconfont icon-yijianfankui'
+          },
+           {
+              text:'认证茶师',
+              icon:'iconfont icon-personalcenter'
+          },
+           {
+              text:'设置',
+              icon:'iconfont icon-shezhi'
+          }
       ]
     };
   },
@@ -101,7 +148,7 @@ export default {
   }
   .order {
     display: flex;
-    padding: 0 12px;
+    padding: 10px 12px;
     justify-content: space-between;
     margin-top: 10px;
     background-color: #ffffff;
@@ -115,6 +162,33 @@ export default {
   .todoList {
     display: flex;
     background-color: #ffffff;
+    ul{
+         display: flex;
+        li{
+            flex: 1;
+            flex-direction: column;
+            text-align: center;
+            padding: 10px 20px;
+        }
+    }
+  }
+  .other{
+       margin-top:10px;
+      background-color: #ffffff;
+      li{
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 12px;
+        border-top:1px solid #cccdda;
+        p{
+          span{
+            padding-right: 10px;
+            color: rgb(207, 23, 23); 
+            font-size: 18px;
+            font-weight: 900;
+          }
+        }
+      }
   }
 }
 </style>

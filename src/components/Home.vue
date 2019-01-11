@@ -24,7 +24,6 @@
             <HomeCommend/>
             <HomePromotion/>
         </div>
-        
         <BottomBar/>
     </div>
 </template>

@@ -95,9 +95,13 @@ export default {
                     var newsTimer;
                     clearInterval(newsTimer);
                     newsTimer = setInterval(()=>{
-                        var cur = parseInt(getComputedStyle(this.$refs.newsUl,false).top);
-                        if(cur > -16){
-                            this.$refs.newsUl.style.top = cur - 1 + "px";
+                        if(this.$refs.newsUl){
+                            var cur = parseInt(getComputedStyle(this.$refs.newsUl,false).top);
+                            if(cur > -16){
+                                this.$refs.newsUl.style.top = cur - 1 + "px";
+                            }else{
+                                clearInterval(newsTimer);
+                            }
                         }else{
                             clearInterval(newsTimer);
                         }

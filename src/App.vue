@@ -30,6 +30,7 @@ import axios from 'axios';
 //把axios写入Vue的原型对象，后面方便调用
 Vue.prototype.$axios = axios;
 
+
 // loading效果
 // 利用axios拦截器全局设置
 // import { Indicator } from 'mint-ui';

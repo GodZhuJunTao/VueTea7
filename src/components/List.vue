@@ -2,16 +2,13 @@
     <div class="page">
         <header>
             <mt-header title="分类" fixed>
-                <!-- <i slot="left">图标</i> -->
                 <mt-button icon="search" slot="right"></mt-button>
             </mt-header>
         </header>
         <div class="main list-box">
             <cube-scroll-nav
             :side="true"
-            :data="categoryCompleteList"
-            @change="changeHandler"
-            @sticky-change="stickyChangeHandler">
+            :data="categoryCompleteList">
                 <div class="list-top">
                     <img src="@/assets/img/list_top.jpg">
                 </div>
@@ -21,7 +18,7 @@
                 :label="item.Name"
                 :title="item.Name">
                     <ul>
-                        <li v-for="goods in item.children" :key="goods.Id">
+                        <li v-for="goods in item.children" :key="goods.Id" @click="gotolist(goods.Id,goods.ParentCategoryId)">
                         <div>
                             <img :src="goods.PictureUrl">
                             <p>{{goods.Name}}</p>
@@ -37,45 +34,21 @@
 <script>
 import BottomBar from './BottomBar';
 import Categories from '@/mock/categories';
-import categoryCompleteList from '@/mock/categoryCompleteList';
 
 import '@/sass/list.scss';
 export default {
     data(){
         return {
-            categoryCompleteList
+            categoryCompleteList:this.$store.state.categoryCompleteList
         }
     },
     methods:{
-        changeHandler(label) {
-            if(label=="推荐"){
-                console.log('怎么上到顶部啊？？？');
-            }
-        },
-        stickyChangeHandler(current) {
-            console.log('sticky-change', current)
+        gotolist(id,pId){
+            this.$router.push({name:'Category',params:{id,pId}});
         }
     },
     components:{BottomBar},
     created(){
-        
-
-
-        // 使用数据接口获取列表
-        // this.$axios({
-        //     method:'post',
-        //     url:`/dbapi/Category/GetCategoryList`,
-        //     headers: {'Content-Type': 'application/json;charset=UTF-8'},
-        //     data:{
-        //         DisplayPic: true
-        //     }
-        // }).then(res=>{
-        //     let data = res;
-        //     this.dataJson = data;
-        // }).catch((err)=>{
-        //     Indicator.close();
-        //     console.log(err);
-        // });
     },
     mounted(){
     }

@@ -22,9 +22,9 @@ import './sass/common.scss';
 import './assets/iconfont/iconfont.css';
 
 //引入title插件
-import theTitle from '@/plugins/theTitle';
+import HomeTitle from '@/plugins/HomeTitle';
 //使用插件
-Vue.use(theTitle);
+Vue.use(HomeTitle);
 
 import axios from 'axios';
 //把axios写入Vue的原型对象，后面方便调用

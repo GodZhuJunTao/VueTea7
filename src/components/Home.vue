@@ -25,6 +25,7 @@
             <HomePromotion/>
             <HomeCate :cateList="homeCatePot.goodslist" :imgUrl="homeCatePot.img"/>
             <HomeCate :cateList="homeCateBai.goodslist" :imgUrl="homeCateBai.img"/>
+            <HomeLike/>
         </div>
         <BottomBar/>
     </div>
@@ -41,6 +42,8 @@ import HomeCommend from './HomeCommend';
 import HomePromotion from './HomePromotion';
 // 一类产品组件
 import HomeCate from './HomeCate';
+// 猜你喜欢组件
+import HomeLike from './HomeLike';
 
 import '@/sass/home.scss';
 
@@ -99,7 +102,7 @@ export default {
             this.$router.push(obj);//可通过path属性进行跳转，path可以传参，name不能传参
         },
     },
-    components:{BottomBar,HomeBanner,HomeCommend,HomePromotion,HomeCate},
+    components:{BottomBar,HomeBanner,HomeCommend,HomePromotion,HomeCate,HomeLike},
     created(){
         this.$axios({
             method:'get',

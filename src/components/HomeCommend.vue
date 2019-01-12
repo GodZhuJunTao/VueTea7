@@ -1,6 +1,6 @@
 <template>
     <div class="commend">
-        <theTitle>小七推荐</theTitle>
+        <HomeTitle>小七推荐</HomeTitle>
         <ul class="commend-list">
             <li v-for="item in commendList" :key="item.title">
                 <div>

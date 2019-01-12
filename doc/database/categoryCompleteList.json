@@ -1,0 +1,409 @@
+[
+    {
+        "Id": 10000,
+        "Name": "推荐",
+        "SeName": "推荐",
+        "PictureUrl": "",
+        "ParentCategoryId": 0,
+        "AdGroupKeyWord": null,
+        "children":[
+            {
+                "Id": 23,
+                "Name": "铁观音",
+                "SeName": "cat-23",
+                "PictureUrl": "http://img.tea7.com/0011446_0.jpeg",
+                "ParentCategoryId": 38,
+                "AdGroupKeyWord": null
+            },
+            {
+                "Id": 17,
+                "Name": "金骏眉",
+                "SeName": "cat-17",
+                "PictureUrl": "http://img.tea7.com/0011372_0.jpeg",
+                "ParentCategoryId": 16,
+                "AdGroupKeyWord": null
+            },
+            {
+                "Id": 15,
+                "Name": "武夷岩茶",
+                "SeName": "cat-15",
+                "PictureUrl": "http://img.tea7.com/0011447_0.jpeg",
+                "ParentCategoryId": 38,
+                "AdGroupKeyWord": null
+            },
+            {
+                "Id": 44,
+                "Name": "龙井",
+                "SeName": "cat-44",
+                "PictureUrl": "http://img.tea7.com/0011479_0.jpeg",
+                "ParentCategoryId": 33,
+                "AdGroupKeyWord": null
+            },
+            {
+                "Id": 47,
+                "Name": "云南滇红",
+                "SeName": "cat-47",
+                "PictureUrl": "http://img.tea7.com/0011450_0.jpeg",
+                "ParentCategoryId": 16,
+                "AdGroupKeyWord": null
+            },
+            {
+                "Id": 30,
+                "Name": "紫砂壶",
+                "SeName": "cat-30",
+                "PictureUrl": "http://img.tea7.com/0011478_0.jpeg",
+                "ParentCategoryId": 1,
+                "AdGroupKeyWord": null
+            },
+            {
+                "Id": 68,
+                "Name": "建盏",
+                "SeName": "cat-68",
+                "PictureUrl": "http://img.tea7.com/0011239_0.jpeg",
+                "ParentCategoryId": 1,
+                "AdGroupKeyWord": null
+            },
+            {
+                "Id": 4,
+                "Name": "功夫茶具     ",
+                "SeName": "cat-4",
+                "PictureUrl": "http://img.tea7.com/0011471_0.jpeg",
+                "ParentCategoryId": 1,
+                "AdGroupKeyWord": null
+            },
+            {
+                "Id": 6,
+                "Name": "茶具电器 ",
+                "SeName": "cat-6",
+                "PictureUrl": "http://img.tea7.com/0011472_0.jpeg",
+                "ParentCategoryId": 1,
+                "AdGroupKeyWord": null
+            }
+        ]
+    },
+    {
+        "Id": 33,
+        "Name": "绿茶",
+        "SeName": "绿茶",
+        "PictureUrl": "http://img.tea7.com/0011375_0.jpeg",
+        "ParentCategoryId": 0,
+        "AdGroupKeyWord": null,
+        "children":[
+            {
+                "Id": 44,
+                "ParentCategoryId": 33,
+                "Name": "龙井",
+                "SeName": "cat-44",
+                "PictureUrl": "http://img.tea7.com/0011479_0.jpeg"
+            },
+            {
+                "Id": 40,
+                "ParentCategoryId": 33,
+                "Name": "黄山毛峰",
+                "SeName": "cat-40",
+                "PictureUrl": "http://img.tea7.com/0011444_0.jpeg"
+            },
+            {
+                "Id": 51,
+                "ParentCategoryId": 33,
+                "Name": "碧螺春",
+                "SeName": "cat-51",
+                "PictureUrl": "http://img.tea7.com/0011445_0.jpeg"
+            },
+            {
+                "Id": 1025,
+                "ParentCategoryId": 33,
+                "Name": "雀舌",
+                "SeName": "cat-1025",
+                "PictureUrl": "http://img.tea7.com/0034474_0.jpeg"
+            },
+            {
+                "Id": 1026,
+                "ParentCategoryId": 33,
+                "Name": "太平猴魁",
+                "SeName": "cat-1026",
+                "PictureUrl": "http://img.tea7.com/0034477_0.jpeg"
+            },
+            {
+                "Id": 1027,
+                "ParentCategoryId": 33,
+                "Name": "安吉白茶",
+                "SeName": "cat-1027",
+                "PictureUrl": "http://img.tea7.com/0057822_0.png"
+            },
+            {
+                "Id": 1028,
+                "ParentCategoryId": 33,
+                "Name": "六安瓜片",
+                "SeName": "cat-1028",
+                "PictureUrl": "http://img.tea7.com/0067761_0.jpeg"
+            }
+        ]
+    },
+    {
+        "Id": 38,
+        "Name": "乌龙",
+        "SeName": "乌龙",
+        "PictureUrl": "http://img.tea7.com/0011383_0.jpeg",
+        "ParentCategoryId": 0,
+        "AdGroupKeyWord": null,
+        "children":[
+            {
+                "Id": 23,
+                "ParentCategoryId": 38,
+                "Name": "铁观音",
+                "SeName": "cat-23",
+                "PictureUrl": "http://img.tea7.com/0011446_0.jpeg"
+            },
+            {
+                "Id": 15,
+                "ParentCategoryId": 38,
+                "Name": "武夷岩茶",
+                "SeName": "cat-15",
+                "PictureUrl": "http://img.tea7.com/0011447_0.jpeg"
+            },
+            {
+                "Id": 25,
+                "ParentCategoryId": 38,
+                "Name": "漳平水仙",
+                "SeName": "cat-25",
+                "PictureUrl": "http://img.tea7.com/0011448_0.jpeg"
+            }
+        ]
+    },
+    {
+        "Id": 16,
+        "Name": "红茶",
+        "SeName": "红茶",
+        "PictureUrl": "http://img.tea7.com/0011377_0.jpeg",
+        "ParentCategoryId": 0,
+        "AdGroupKeyWord": null,
+        "children":[
+            {
+                "Id": 17,
+                "ParentCategoryId": 16,
+                "Name": "金骏眉",
+                "SeName": "cat-17",
+                "PictureUrl": "http://img.tea7.com/0011372_0.jpeg"
+            },
+            {
+                "Id": 18,
+                "ParentCategoryId": 16,
+                "Name": "正山小种",
+                "SeName": "cat-18",
+                "PictureUrl": "http://img.tea7.com/0011449_0.jpeg"
+            },
+            {
+                "Id": 47,
+                "ParentCategoryId": 16,
+                "Name": "云南滇红",
+                "SeName": "cat-47",
+                "PictureUrl": "http://img.tea7.com/0011450_0.jpeg"
+            },
+            {
+                "Id": 46,
+                "ParentCategoryId": 16,
+                "Name": "祁门红茶",
+                "SeName": "cat-46",
+                "PictureUrl": "http://img.tea7.com/0011451_0.jpeg"
+            },
+            {
+                "Id": 48,
+                "ParentCategoryId": 16,
+                "Name": "政和工夫",
+                "SeName": "cat-48",
+                "PictureUrl": "http://img.tea7.com/0011452_0.jpeg"
+            },
+            {
+                "Id": 49,
+                "ParentCategoryId": 16,
+                "Name": "坦洋工夫",
+                "SeName": "cat-49",
+                "PictureUrl": "http://img.tea7.com/0011453_0.jpeg"
+            }
+        ]
+    },
+    {
+        "Id": 19,
+        "Name": "白茶",
+        "SeName": "白茶",
+        "PictureUrl": "http://img.tea7.com/0011378_0.jpeg",
+        "ParentCategoryId": 0,
+        "AdGroupKeyWord": null,
+        "children":[
+            {
+                "Id": 20,
+                "ParentCategoryId": 19,
+                "Name": "白牡丹",
+                "SeName": "cat-20",
+                "PictureUrl": "http://img.tea7.com/0011455_0.jpeg"
+            },
+            {
+                "Id": 22,
+                "ParentCategoryId": 19,
+                "Name": "白毫银针",
+                "SeName": "cat-22",
+                "PictureUrl": "http://img.tea7.com/0011456_0.jpeg"
+            },
+            {
+                "Id": 52,
+                "ParentCategoryId": 19,
+                "Name": "贡眉",
+                "SeName": "cat-52",
+                "PictureUrl": "http://img.tea7.com/0011454_0.jpeg"
+            }
+        ]
+    },
+    {
+        "Id": 35,
+        "Name": "普洱",
+        "SeName": "普洱",
+        "PictureUrl": "http://img.tea7.com/0011379_0.jpeg",
+        "ParentCategoryId": 0,
+        "AdGroupKeyWord": null,
+        "children":[
+            {
+                "Id": 36,
+                "ParentCategoryId": 35,
+                "Name": "生茶",
+                "SeName": "cat-36",
+                "PictureUrl": "http://img.tea7.com/0011457_0.jpeg"
+            },
+            {
+                "Id": 37,
+                "ParentCategoryId": 35,
+                "Name": "熟茶",
+                "SeName": "cat-37",
+                "PictureUrl": "http://img.tea7.com/0011458_0.jpeg"
+            }
+        ]
+    },
+    {
+        "Id": 43,
+        "Name": "花茶",
+        "SeName": "花茶",
+        "PictureUrl": "http://img.tea7.com/0011380_0.jpeg",
+        "ParentCategoryId": 0,
+        "AdGroupKeyWord": null,
+        "children":[
+            {
+                "Id": 34,
+                "ParentCategoryId": 43,
+                "Name": "茉莉花茶",
+                "SeName": "cat-34",
+                "PictureUrl": "http://img.tea7.com/0011459_0.jpeg"
+            },
+            {
+                "Id": 41,
+                "ParentCategoryId": 43,
+                "Name": "花草茶",
+                "SeName": "cat-41",
+                "PictureUrl": "http://img.tea7.com/0011460_0.jpeg"
+            }
+        ]
+    },
+    {
+        "Id": 1,
+        "Name": "茶具",
+        "SeName": "茶具",
+        "PictureUrl": "http://img.tea7.com/0011381_0.jpeg",
+        "ParentCategoryId": 0,
+        "AdGroupKeyWord": null,
+        "children":[
+            {
+                "Id": 30,
+                "ParentCategoryId": 1,
+                "Name": "紫砂壶",
+                "SeName": "cat-30",
+                "PictureUrl": "http://img.tea7.com/0011478_0.jpeg"
+            },
+            {
+                "Id": 68,
+                "ParentCategoryId": 1,
+                "Name": "建盏",
+                "SeName": "cat-68",
+                "PictureUrl": "http://img.tea7.com/0011239_0.jpeg"
+            },
+            {
+                "Id": 4,
+                "ParentCategoryId": 1,
+                "Name": "功夫茶具",
+                "SeName": "cat-4",
+                "PictureUrl": "http://img.tea7.com/0011471_0.jpeg"
+            },
+            {
+                "Id": 6,
+                "ParentCategoryId": 1,
+                "Name": "茶具电器",
+                "SeName": "cat-6",
+                "PictureUrl": "http://img.tea7.com/0011472_0.jpeg"
+            },
+            {
+                "Id": 7,
+                "ParentCategoryId": 1,
+                "Name": "茶具配件",
+                "SeName": "cat-7",
+                "PictureUrl": "http://img.tea7.com/0011473_0.jpeg"
+            },
+            {
+                "Id": 42,
+                "ParentCategoryId": 1,
+                "Name": "飘逸杯",
+                "SeName": "cat-42",
+                "PictureUrl": "http://img.tea7.com/0011474_0.jpeg"
+            },
+            {
+                "Id": 5,
+                "ParentCategoryId": 1,
+                "Name": "旅行茶具",
+                "SeName": "cat-5",
+                "PictureUrl": "http://img.tea7.com/0011475_0.jpeg"
+            },
+            {
+                "Id": 2,
+                "ParentCategoryId": 1,
+                "Name": "整套茶具",
+                "SeName": "cat-2",
+                "PictureUrl": "http://img.tea7.com/0011476_0.jpeg"
+            },
+            {
+                "Id": 3,
+                "ParentCategoryId": 1,
+                "Name": "茶盘",
+                "SeName": "cat-3",
+                "PictureUrl": "http://img.tea7.com/0012723_0.jpeg"
+            },
+            {
+                "Id": 1016,
+                "ParentCategoryId": 1,
+                "Name": "干泡茶具",
+                "SeName": "cat-1016",
+                "PictureUrl": "http://img.tea7.com/0012391_0.jpeg"
+            },
+            {
+                "Id": 1018,
+                "ParentCategoryId": 1,
+                "Name": "玻璃茶具",
+                "SeName": "cat-1018",
+                "PictureUrl": "http://img.tea7.com/0012722_0.jpeg"
+            }
+        ]
+    },
+    {
+        "Id": 72,
+        "Name": "手艺",
+        "SeName": "手艺",
+        "PictureUrl": "http://img.tea7.com/0011382_0.jpeg",
+        "ParentCategoryId": 0,
+        "AdGroupKeyWord": null,
+        "children":[
+            {
+                "Id": 69,
+                "ParentCategoryId": 72,
+                "Name": "根雕",
+                "SeName": "cat-69",
+                "PictureUrl": "http://img.tea7.com/0011240_0.png"
+            }
+        ]
+    }
+]

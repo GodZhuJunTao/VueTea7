@@ -32,23 +32,23 @@ Vue.prototype.$axios = axios;
 
 // loading效果
 // 利用axios拦截器全局设置
-import { Indicator } from 'mint-ui';
-// http请求拦截器
-axios.interceptors.request.use(config=>{
-    Indicator.open('加载中...');
-    return config;
-}), error => {
-    Indicator.close();
-    return Promise.reject(error);
-}
-// http响应拦截器
-axios.interceptors.response.use(data=>{
-    Indicator.close();
-    return data;
-}), error => {
-    Indicator.close();
-    return Promise.reject(error);
-}
+// import { Indicator } from 'mint-ui';
+// // http请求拦截器
+// axios.interceptors.request.use(config=>{
+//     Indicator.open('加载中...');
+//     return config;
+// }), error => {
+//     Indicator.close();
+//     return Promise.reject(error);
+// }
+// // http响应拦截器
+// axios.interceptors.response.use(data=>{
+//     Indicator.close();
+//     return data;
+// }), error => {
+//     Indicator.close();
+//     return Promise.reject(error);
+// }
 
 
 export default {

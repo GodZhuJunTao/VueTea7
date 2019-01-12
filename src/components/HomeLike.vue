@@ -38,7 +38,6 @@ export default {
         }).then(res=>{
             let data = res.data;
             this.likeList = data;
-            console.log(this.likeList);
         }).catch((err)=>{
             Indicator.close();
             console.log(err);

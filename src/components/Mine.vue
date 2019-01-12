@@ -39,7 +39,6 @@
 </template>
 <script>
 import BottomBar from "./BottomBar";
-import HomeTitle from './HomeTitle';
 export default {
   data() {
     return {
@@ -106,7 +105,7 @@ export default {
   },
   methods: {},
 
-  components: { BottomBar,HomeTitle }
+  components: { BottomBar }
 };
 </script>
 <style lang="scss" scoped>

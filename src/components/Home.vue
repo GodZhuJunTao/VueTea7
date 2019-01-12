@@ -1,14 +1,14 @@
 <template>
     <div class="page">
-        <mt-header title="茶七产品" fixed>
-            <i slot="left" class="logoImg"></i>
-            <i class="iconfont icon-xiaoxizhongxin server" slot="right" @click="goto('Server')"></i>
-        </mt-header>
-        <div class="search">
-            <input type="text" placeholder="搜索您喜欢的产品">
-            <i class="iconfont icon-sousuo"></i>
-        </div>
-        <div class="main">
+        <header>
+            <mt-header title="茶七产品" fixed>
+                <i slot="left" class="logoImg"></i>
+                <i class="iconfont icon-xiaoxizhongxin server" slot="right" @click="goto('Server')"></i>
+            </mt-header>
+            <div class="search">
+                <input type="text" placeholder="搜索您喜欢的产品">
+                <i class="iconfont icon-sousuo"></i>
+            </div>
             <div class="homeTabs">
                 <cube-scroll
                 ref="scroll"
@@ -20,6 +20,8 @@
                     </ul>
                 </cube-scroll>
             </div>
+        </header>
+        <div class="main">
             <HomeBanner/>
             <HomeCommend/>
             <HomePromotion/>
@@ -161,36 +163,37 @@ export default {
 <style lang="scss" scoped>
     .page{
         background:#f5f5f5;
-        margin-top:92px;
-        margin-bottom:50px;
-        .mint-header{
+        &>header{
             z-index:10;
-            .logoImg{
-                display: block;
-                width: 20px;
-                height: 20px;
-                background:url(../assets/img/logo.jpg) no-repeat;
-                background-size:100%;
+            height: 92px;
+            .mint-header{
+                .logoImg{
+                    display: block;
+                    width: 20px;
+                    height: 20px;
+                    background:url(../assets/img/logo.jpg) no-repeat;
+                    background-size:100%;
+                }
+                .server{
+                    font-size: 22px;
+                }
             }
-            .server{
-                font-size: 22px;
+            .search{
+                box-sizing: border-box;
+                position:fixed;
+                top:10px;
+                left:15%;
+                z-index:11;
+                width:70%;
+                input[type="text"]{
+                    box-sizing: inherit;
+                    height: 30px;
+                    border-radius:15px;
+                    width:100%;
+                    padding:0 15%;
+                }
+                i{color:#555555;position:absolute;top:50%;left:10px;transform:translateY(-50%);}
             }
-        }
-        .search{
-            box-sizing: border-box;
-            position:fixed;
-            top:10px;
-            left:15%;
-            z-index:11;
-            width:70%;
-            input[type="text"]{
-                box-sizing: inherit;
-                height: 30px;
-                border-radius:15px;
-                width:100%;
-                padding:0 15%;
-            }
-            i{color:#555555;position:absolute;top:50%;left:10px;transform:translateY(-50%);}
         }
         
 

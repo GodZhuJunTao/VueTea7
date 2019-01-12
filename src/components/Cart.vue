@@ -1,21 +1,25 @@
 <template>
     <div class="page">
-        <mt-header title="购物车" class="cart-title" fixed>
-            <!-- <i slot="left">图标</i> -->
-            <mt-button slot="right">编辑</mt-button>
-            <mt-button slot="right"><span class="iconfont icon-xiaoxizhongxin"></span></mt-button>
-        </mt-header>
-    <div class="media">
-        <div class="media-left">
-            <a href="#">
-                <img class="media-object" src=".." alt="...">
-            </a>
-        </div>
-        <div class="media-body">
-            <h4 class="media-heading">Media heading</h4>
-        </div>
-    </div>
+        <header>
+            <mt-header title="购物车" class="cart-title" fixed>
+                <!-- <i slot="left">图标</i> -->
+                <mt-button slot="right">编辑</mt-button>
+                <mt-button slot="right"><span class="iconfont icon-xiaoxizhongxin"></span></mt-button>
+            </mt-header>
+        </header>
+        <div class="main">
+            <div class="media">
+                <div class="media-left">
+                    <a href="#">
+                        <img class="media-object" src="#">
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">Media heading</h4>
+                </div>
+            </div>
 
+        </div>
         <BottomBar/>
     </div>
 </template>
@@ -35,7 +39,9 @@ export default {
 </script>
 <style lang="scss" scoped>
     .page{
-        margin-top:50px;
+        &>header{
+            height: 50px;
+        }
         .cart-title{
             font-size: 16px;
         }

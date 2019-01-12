@@ -1,43 +1,45 @@
 <template>
     <div class="page">
-        <div class="MineTop">
-            <mt-button size="normal" class="Btn">登录 / 注册</mt-button>
-        </div>
-        <div class="MineCentent">
-            <ul class="uList">
-                <li v-for="item in list" :key="item.name">
-                    <p>{{item.num}}</p>
-                    <p :class="{active:true}">{{item.name}}</p>
-                </li>
-            </ul>
-            <div class="order">
-                <p class="myOrder">
-                    <span class="iconfont icon-icon_order"></span>我的订单
-                </p>
-                <p class="allOrder">
-                    全部订单
-                    <span class="iconfont icon-right-line"></span>
-                </p>
+        <div class="main">
+            <div class="MineTop">
+                <mt-button size="normal" class="Btn">登录 / 注册</mt-button>
             </div>
-            <div class="todoList">
-                <ul>
-                    <li v-for="item in todoTbas" :key="item.text">
-                    <span :class="item.icon"></span>
-                    <p>{{item.text}}</p>
+            <div class="MineCentent">
+                <ul class="uList">
+                    <li v-for="item in list" :key="item.name">
+                        <p>{{item.num}}</p>
+                        <p :class="{active:true}">{{item.name}}</p>
+                    </li>
+                </ul>
+                <div class="order">
+                    <p class="myOrder">
+                        <span class="iconfont icon-icon_order"></span>我的订单
+                    </p>
+                    <p class="allOrder">
+                        全部订单
+                        <span class="iconfont icon-right-line"></span>
+                    </p>
+                </div>
+                <div class="todoList">
+                    <ul>
+                        <li v-for="item in todoTbas" :key="item.text">
+                        <span :class="item.icon"></span>
+                        <p>{{item.text}}</p>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="other">
+                    <li v-for="item in otherTbas" :key="item.text">
+                        <p>
+                        <span :class="item.icon"></span>
+                        {{item.text}}
+                        </p>
+                        <i class="iconfont icon-right-line"></i>
                     </li>
                 </ul>
             </div>
-            <ul class="other">
-                <li v-for="item in otherTbas" :key="item.text">
-                    <p>
-                    <span :class="item.icon"></span>
-                    {{item.text}}
-                    </p>
-                    <i class="iconfont icon-right-line"></i>
-                </li>
-            </ul>
+            <HomeTitle class="HomeTitle">猜你喜欢</HomeTitle>
         </div>
-        <HomeTitle class="HomeTitle">猜你喜欢</HomeTitle>
         <BottomBar/>
     </div>
 </template>
@@ -115,9 +117,6 @@ export default {
 .page {
     background-color: #f5f5f5;
     font-size: 13px;
-    margin-bottom: 60px;
-    flex: 1;
-    overflow-x: hidden;
     .HomeTitle {
         background-color: #ffffff;
         margin-top: 5px;

@@ -1,9 +1,11 @@
 <template>
     <div class="page">
-        <mt-header title="分类" fixed>
-            <!-- <i slot="left">图标</i> -->
-            <mt-button icon="search" slot="right"></mt-button>
-        </mt-header>
+        <header>
+            <mt-header title="分类" fixed>
+                <!-- <i slot="left">图标</i> -->
+                <mt-button icon="search" slot="right"></mt-button>
+            </mt-header>
+        </header>
         <div class="main">
             <div>{{categoryCompleteList}}</div>
             <!-- <cube-scroll-nav
@@ -77,8 +79,9 @@ export default {
 </script>
 <style lang="scss" scoped>
     .page{
-        margin:50px 0;
-        flex:1;
-        overflow-x:hidden;
+        &>header{
+            height: 50px;
+            width:100%;
+        }
     }
 </style>

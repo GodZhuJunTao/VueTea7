@@ -29,24 +29,27 @@ html{
 
 body,html{
     height: 100%;
-    touch-action: none;//当你触摸并按住触摸目标时候，禁止系统默认菜单
+    // touch-action: none;//当你触摸并按住触摸目标时候，禁止系统默认菜单
 }
 a{color:#666666;}
 #container{
     height: 100%;
-    display: flex;
-    flex-direction:column;
-    .main{
-        flex:1;
-        overflow-x:hidden;
-    }
-    .carousel{
-        .mint-swipe>.mint-swipe-indicators>.mint-swipe-indicator{
-            opacity:1;
-            background:#fff;
+    .page{
+        height: 100%;
+        display: flex;
+        flex-direction:column;
+        .main{
+            flex:1;
+            overflow-x:hidden;
         }
-        .mint-swipe>.mint-swipe-indicators>.is-active{
-            background:#b0352f;
+        .carousel{
+            .mint-swipe>.mint-swipe-indicators>.mint-swipe-indicator{
+                opacity:1;
+                background:#fff;
+            }
+            .mint-swipe>.mint-swipe-indicators>.is-active{
+                background:#b0352f;
+            }
         }
     }
 }

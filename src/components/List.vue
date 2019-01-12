@@ -6,34 +6,30 @@
                 <mt-button icon="search" slot="right"></mt-button>
             </mt-header>
         </header>
-        <div class="main">
-            <div>{{categoryCompleteList}}</div>
-            <!-- <cube-scroll-nav
+        <div class="main list-box">
+            <cube-scroll-nav
             :side="true"
-            :data="data"
-            :current="current"
+            :data="categoryCompleteList"
             @change="changeHandler"
             @sticky-change="stickyChangeHandler">
-                <ul class="prepend-header" slot="prepend">
-                    <li>11</li>
-                    <li>22</li>
-                    <li>333</li>
-                </ul>
+                <div class="list-top">
+                    <img src="@/assets/img/list_top.jpg">
+                </div>
                 <cube-scroll-nav-panel
-                v-for="item in data"
-                :key="item.name"
-                :label="item.name"
-                :title="item.name">
+                v-for="item in categoryCompleteList"
+                :key="item.Name"
+                :label="item.Name"
+                :title="item.Name">
                     <ul>
-                        <li v-for="food in item.foods">
+                        <li v-for="goods in item.children" :key="goods.Id">
                         <div>
-                            <img :src="food.icon">
-                            <p>{{food.name}}</p>
+                            <img :src="goods.PictureUrl">
+                            <p>{{goods.Name}}</p>
                         </div>
                         </li>
                     </ul>
                 </cube-scroll-nav-panel>
-            </cube-scroll-nav> -->
+            </cube-scroll-nav>
         </div>
         <BottomBar/>
     </div>
@@ -41,19 +37,27 @@
 <script>
 import BottomBar from './BottomBar';
 import Categories from '@/mock/categories';
+import categoryCompleteList from '@/mock/categoryCompleteList';
+
+import '@/sass/list.scss';
 export default {
     data(){
         return {
-            categoryCompleteList:[]
+            categoryCompleteList
         }
     },
     methods:{
-        
+        changeHandler(label) {
+            if(label=="推荐"){
+                console.log('怎么上到顶部啊？？？');
+            }
+        },
+        stickyChangeHandler(current) {
+            console.log('sticky-change', current)
+        }
     },
     components:{BottomBar},
     created(){
-        // 使用假数据
-        Categories.then(res=>this.categoryCompleteList=res);
         
 
 
@@ -79,6 +83,7 @@ export default {
 </script>
 <style lang="scss" scoped>
     .page{
+        background:#fff;
         &>header{
             height: 50px;
             width:100%;

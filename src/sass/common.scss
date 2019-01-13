@@ -119,3 +119,20 @@ a{color:#666666;}
         
     }
 }
+
+// footer路由导航栏rem不兼容处理
+footer{
+    .mint-tabbar.is-fixed{
+        .mint-tab-item{
+            padding:7px 0;
+            .mint-tab-item-icon{
+                width: 24px;
+                height: 24px;
+                margin: 0 auto 5px;
+            }
+            .mint-tab-item-label {
+                font-size: 12px;
+            }
+        }
+    }
+}

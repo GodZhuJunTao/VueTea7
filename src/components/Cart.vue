@@ -23,13 +23,14 @@
                     <div class="goods-price-num">
                         <div class="goods-price"><span>￥261.0</span></div>
                         <div class="goods-num">
-                            <span class="iconfont icon-right-line"></span>
+                            <span class="goods-add">+</span>
                             <input type="number" value="1"/>
-                            <span class="iconfont icon-right-line"></span>
+                            <span class="goods-minus">－</span>
                         </div>
                     </div>
                 </div>
-            </div>  
+            </div> 
+
         </div>
         <BottomBar/>
     </div>
@@ -62,12 +63,13 @@ export default {
         }
 
         .main{
-
+            background-color: #f5f5f5;
             .goods-item{
                 display: flex;;
                 height:80px;
                 padding:10px;
                 border-bottom: 1px solid #ccc;
+                 background-color:#fff;
                 .goods-select{
                     height: 70px;
                     width: 30px;
@@ -105,11 +107,20 @@ export default {
                         }
                     }
                     .goods-num{
+                        color:rgb(187, 178, 178);
                         span{
                             display: inline-block;
+                            background-color: rgb(230, 227, 227);
+                            height: 20px;
+                            width: 20px;
+                            border-radius: 50%;
+                            text-align: center;
+                            line-height: 20px;
+
                         }
                         input{
                             display:inline-block;
+                            margin: 0 10px;
                             height:20px;
                             width:20px;
                             text-align: center;

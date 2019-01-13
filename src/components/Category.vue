@@ -66,7 +66,7 @@ export default {
     },
     components:{CategoryList},
     created(){
-        // console.log('craete:',this.parentList,'pId:',this.$store.state.categoryPId,'Id:',this.$store.state.categoryId);
+        console.log('craete:',this.parentList,'pId:',this.$store.state.categoryPId,'Id:',this.$store.state.categoryId);
     },
     mounted(){
         // console.log('mm',this.parentList);

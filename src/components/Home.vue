@@ -195,6 +195,7 @@ export default {
                     box-sizing: inherit;
                     height: 30px;
                     border-radius:15px;
+                    font-size:16px;
                     width:100%;
                     padding:0 15%;
                 }

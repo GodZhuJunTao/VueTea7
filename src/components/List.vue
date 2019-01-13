@@ -44,7 +44,8 @@ export default {
     },
     methods:{
         gotolist(id,pId){
-            this.$router.push({name:'Category',params:{id,pId}});
+            this.$store.commit('changeCategory',{id,pId});
+            this.$router.push({path:'/category'});
         }
     },
     components:{BottomBar},

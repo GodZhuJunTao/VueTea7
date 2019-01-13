@@ -8,17 +8,28 @@
             </mt-header>
         </header>
         <div class="main">
-            <div class="media">
-                <div class="media-left">
+            <div class="goods-item">
+                <div class="goods-select">
+                    <span class="iconfont icon-right-line"></span>
+                </div>
+                <div class="goods-img">
                     <a href="#">
-                        <img class="media-object" src="#">
+                        <img src="../assets/img/home_cate2.jpg" alt="">
                     </a>
                 </div>
-                <div class="media-body">
-                    <h4 class="media-heading">Media heading</h4>
+                <div class="goods-details">
+                    <p class="goods-title"><a href="#">洞庭山原产-碧螺春500g-清爽绿茶大份量礼盒</a></p>
+                    <p class="goods-genre">清香型</p>
+                    <div class="goods-price-num">
+                        <div class="goods-price"><span>￥261.0</span></div>
+                        <div class="goods-num">
+                            <span class="iconfont icon-right-line"></span>
+                            <input type="number" value="1"/>
+                            <span class="iconfont icon-right-line"></span>
+                        </div>
+                    </div>
                 </div>
-            </div>
-
+            </div>  
         </div>
         <BottomBar/>
     </div>
@@ -49,5 +60,64 @@ export default {
             font-size: 22px;
             margin-left: 30px;
         }
+
+        .main{
+
+            .goods-item{
+                display: flex;;
+                height:80px;
+                padding:10px;
+                border-bottom: 1px solid #ccc;
+                .goods-select{
+                    height: 70px;
+                    width: 30px;
+                    line-height: 60px;
+                }
+                .goods-img{
+                    width: 80px;
+                    padding: 0 5px;
+                    img{
+                        height: 70px;
+                        width: 70px;
+                        border: 1px solid #ccc;
+                    }
+                }
+                .goods-title{
+                    font-size: 13px;
+                    width:200px;
+                    a{
+                        color: #000;
+                    }    
+                }
+                .goods-genre{
+                    line-height:16px;
+                    font-size: 10px;
+                    color: rgb(158, 156, 156);
+                }
+                .goods-price-num{
+                    display:flex;
+                    justify-content: space-between;
+                    height: 20px;
+                    padding-top: 11px;
+                    .goods-price{
+                        span{
+                            color: rgb(160, 14, 14);
+                        }
+                    }
+                    .goods-num{
+                        span{
+                            display: inline-block;
+                        }
+                        input{
+                            display:inline-block;
+                            height:20px;
+                            width:20px;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+        
     }
 </style>

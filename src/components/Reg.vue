@@ -1,9 +1,7 @@
 <template>
   	<div class="page">
-		<mt-header title="短信登录" fixed>
-			<router-link to="/" slot="left">
-				<mt-button icon="back"></mt-button>
-			</router-link>
+		<mt-header title="注册" fixed>
+            <mt-button icon="back" slot="left" @click="goto('back')"></mt-button>
 			<mt-button slot="right"><span class="iconfont icon-kefu"></span></mt-button>
 		</mt-header>
 		<div>
@@ -14,8 +12,8 @@
 			<mt-field placeholder="请再次输入密码" type="password" v-model="againPassword" class="againPassword"></mt-field>
 			<mt-button type="danger" size="large" class="loginBtn">注册</mt-button>
 			<div class="protocol">
-				<span href="#" class="codeLogin">注册即视为同意</span>
-				<a href="#" class="quickReg">《服务协议》</a>
+				<span href="javascript:;" class="codeLogin">注册即视为同意</span>
+				<a href="javascript:;" class="quickReg">《服务协议》</a>
 			</div>
 		</div>
   	</div>
@@ -25,11 +23,23 @@ export default {
   	data() {
     	return {	
       		phoneAttr:{
-        	autofocus:'autofocus'
-      		}
+				autofocus:'autofocus'
+            },
+            phone:'',
+            captcha:'',
+            password:'',
+            againPassword:''
     	};
   	},
-  methods: {}
+    methods: {
+        goto(name){
+            if(name==='back'){
+                this.$router.back();
+            }else{
+                this.$router.push({name});
+            }
+        }
+    }
 };
 </script>
 <style lang="scss" scoped>

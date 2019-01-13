@@ -16,7 +16,8 @@
                 direction="horizontal"
                 class="horizontal-scroll-list-wrap">
                     <ul class="list-wrapper">
-                        <li v-for="item in topTabs" class="list-item" :key="item.label"><a href="javascript:;" :class="{active:item.label==selectedLabel}">{{ item.label }}</a></li>
+                        <li class="list-item" key="推荐"><a href="javascript:;" class="active">推荐</a></li>
+                        <li v-for="item in topTabs" class="list-item" :key="item.label"><a href="javascript:;" @click="gotolist(item.Id,item.ParentCategoryId)">{{ item.label }}</a></li>
                     </ul>
                 </cube-scroll>
             </div>
@@ -55,31 +56,49 @@ export default {
             selectedLabel: '推荐',
             topTabs: [
                 {
-                    label: '推荐'
+                    label: '金骏眉',
+                    Id:17,
+                    ParentCategoryId:16
                 }, {
-                    label: '金骏眉'
+                    label: '武夷岩茶',
+                    Id:15,
+                    ParentCategoryId:38
                 }, {
-                    label: '武夷岩茶'
+                    label: '紫砂壶',
+                    Id:30,
+                    ParentCategoryId:1
                 }, {
-                    label: '紫砂壶'
+                    label: '龙井',
+                    Id:44,
+                    ParentCategoryId:33
                 }, {
-                    label: '龙井'
+                    label: '漳平水仙',
+                    Id:25,
+                    ParentCategoryId:38
                 }, {
-                    label: '漳平水仙'
+                    label: '茉莉花茶',
+                    Id:34,
+                    ParentCategoryId:43
                 }, {
-                    label: '茉莉花茶'
+                    label: '铁观音',
+                    Id:23,
+                    ParentCategoryId:38
                 }, {
-                    label: '采茶'
+                    label: '碧螺春',
+                    Id:51,
+                    ParentCategoryId:33 
                 }, {
-                    label: '铁观音'
+                    label: '正山小种',
+                    Id:18,
+                    ParentCategoryId:16
                 }, {
-                    label: '碧螺春'
+                    label: '功夫茶具',
+                    Id:4,
+                    ParentCategoryId:1
                 }, {
-                    label: '正山小种'
-                }, {
-                    label: '功夫茶具'
-                }, {
-                    label: '建盏'
+                    label: '建盏',
+                    Id:68,
+                    ParentCategoryId:1
                 }
             ],
             homeCatePot:{
@@ -103,6 +122,10 @@ export default {
             }
             this.$router.push(obj);//可通过path属性进行跳转，path可以传参，name不能传参
         },
+        gotolist(id,pId){
+            this.$store.commit('changeCategory',{id,pId});
+            this.$router.push({path:'/category'});
+        }
     },
     components:{BottomBar,HomeBanner,HomeCommend,HomePromotion,HomeCate,HomeLike},
     created(){

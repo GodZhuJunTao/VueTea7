@@ -2,7 +2,7 @@
     <div class="page">
         <div class="main">
             <div class="MineTop">
-                <mt-button size="normal" class="Btn">登录 / 注册</mt-button>
+                <mt-button size="normal" class="Btn" @click="goto('Login')">登录 / 注册</mt-button>
             </div>
             <div class="MineCentent">
                 <ul class="uList">
@@ -108,7 +108,11 @@ export default {
             ]
         };
     },
-    methods: {},
+    methods: {
+        goto(name){
+            this.$router.push({name});
+        }
+    },
 
     components: { BottomBar }
 };

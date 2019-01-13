@@ -1,9 +1,7 @@
 <template>
   	<div class="page">
     	<mt-header title="短信登录" fixed>
-			<router-link to="/" slot="left">
-				<mt-button icon="back"></mt-button>
-			</router-link>
+			<mt-button icon="back" slot="left" @click="goto('back')"></mt-button>
 			<mt-button slot="right">
 				<span class="iconfont icon-kefu"></span>
 			</mt-button>
@@ -14,10 +12,10 @@
 			<mt-button type="danger" size="normal" class="captchaBtn">获取手机验证码</mt-button>
 			<mt-button type="danger" size="large" class="loginBtn">登录</mt-button>
 			<div>
-				<a href="#" class="codeLogin">
+				<a href="javascript:;" class="codeLogin">
 					<span class="iconfont icon-mima"></span>密码登录
 				</a>
-				<a href="#" class="quickReg">
+				<a href="javascript:;" class="quickReg" @click="goto('Reg')">
 					<span class="iconfont icon-shouji"></span>快速注册
 				</a>
 			</div>
@@ -28,12 +26,22 @@
 	export default {
 		data() {
 			return {
-			phoneAttr: {
-				autofocus: "autofocus"
-				}
+				phoneAttr: {
+					autofocus: "autofocus"
+				},
+				phone:'',
+				captcha:''
 			};
 		},
-		methods: {}
+		methods: {
+			goto(name){
+				if(name==='back'){
+					this.$router.back();
+				}else{
+					this.$router.push({name});
+				}
+			}
+		}
 	};
 </script>
 <style lang="scss" scoped>

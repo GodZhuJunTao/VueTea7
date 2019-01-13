@@ -2,38 +2,31 @@
     <div class="page">
         <header>
             <mt-header title="分类" fixed>
-                <!-- <i slot="left">图标</i> -->
                 <mt-button icon="search" slot="right"></mt-button>
             </mt-header>
         </header>
-        <div class="main">
-            <div>{{categoryCompleteList}}</div>
-            <!-- <cube-scroll-nav
+        <div class="main list-box">
+            <cube-scroll-nav
             :side="true"
-            :data="data"
-            :current="current"
-            @change="changeHandler"
-            @sticky-change="stickyChangeHandler">
-                <ul class="prepend-header" slot="prepend">
-                    <li>11</li>
-                    <li>22</li>
-                    <li>333</li>
-                </ul>
+            :data="categoryCompleteList">
+                <div class="list-top">
+                    <img src="@/assets/img/list_top.jpg">
+                </div>
                 <cube-scroll-nav-panel
-                v-for="item in data"
-                :key="item.name"
-                :label="item.name"
-                :title="item.name">
+                v-for="item in categoryCompleteList"
+                :key="item.Name"
+                :label="item.Name"
+                :title="item.Name">
                     <ul>
-                        <li v-for="food in item.foods">
+                        <li v-for="goods in item.children" :key="goods.Id" @click="gotolist(goods.Id,goods.ParentCategoryId)">
                         <div>
-                            <img :src="food.icon">
-                            <p>{{food.name}}</p>
+                            <img :src="goods.PictureUrl">
+                            <p>{{goods.Name}}</p>
                         </div>
                         </li>
                     </ul>
                 </cube-scroll-nav-panel>
-            </cube-scroll-nav> -->
+            </cube-scroll-nav>
         </div>
         <BottomBar/>
     </div>
@@ -41,37 +34,21 @@
 <script>
 import BottomBar from './BottomBar';
 import Categories from '@/mock/categories';
+
+import '@/sass/list.scss';
 export default {
     data(){
         return {
-            categoryCompleteList:[]
+            categoryCompleteList:this.$store.state.categoryCompleteList
         }
     },
     methods:{
-        
+        gotolist(id,pId){
+            this.$router.push({name:'Category',params:{id,pId}});
+        }
     },
     components:{BottomBar},
     created(){
-        // 使用假数据
-        Categories.then(res=>this.categoryCompleteList=res);
-        
-
-
-        // 使用数据接口获取列表
-        // this.$axios({
-        //     method:'post',
-        //     url:`/dbapi/Category/GetCategoryList`,
-        //     headers: {'Content-Type': 'application/json;charset=UTF-8'},
-        //     data:{
-        //         DisplayPic: true
-        //     }
-        // }).then(res=>{
-        //     let data = res;
-        //     this.dataJson = data;
-        // }).catch((err)=>{
-        //     Indicator.close();
-        //     console.log(err);
-        // });
     },
     mounted(){
     }
@@ -79,6 +56,7 @@ export default {
 </script>
 <style lang="scss" scoped>
     .page{
+        background:#fff;
         &>header{
             height: 50px;
             width:100%;

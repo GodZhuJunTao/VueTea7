@@ -82,3 +82,40 @@ a{color:#666666;}
         right:-15px;
     }
 }
+
+// 顶部导航栏
+.homeTabs{
+    height: 42px;
+    position:fixed;
+    top:50px;
+    left:0;
+    width:100%;
+    z-index:10;
+    background:#fff;
+    .horizontal-scroll-list-wrap{
+        .cube-scroll-content{
+            display: inline-block;
+            .cube-scroll-list-wrapper{
+                .list-wrapper{
+                    line-height: 40px;
+                    white-space: nowrap;}
+                .list-item{
+                    height: 40px;
+                    display: inline-block;
+                    margin-left:15px;
+                    a{
+                        display: block;
+                        padding:0 8px;
+                        color:#222;
+                        font-size:16px;
+                    }
+                    .active{
+                        color:#b0352f;
+                        border-bottom:3px solid #b0352f;
+                    }
+                }
+            }
+        }
+        
+    }
+}

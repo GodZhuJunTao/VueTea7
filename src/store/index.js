@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 Vue.use(Vuex);
+import categoryCompleteList from '@/mock/categoryCompleteList';
 
 export default new Vuex.Store({
     state:{
@@ -36,7 +37,8 @@ export default new Vuex.Store({
                 name:'Mine'
             },
         ],
-        selected:'/home'
+        selected:'/home',
+        categoryCompleteList
     },
     mutations:{
         changeSelected(state,payload){

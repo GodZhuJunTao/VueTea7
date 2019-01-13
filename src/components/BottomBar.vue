@@ -13,15 +13,29 @@
 export default {
     data(){
         return {
-            tabs:this.$store.state.tabs,
-            selected:this.$store.state.selected
+            tabs:this.$store.state.tabs
+        }
+    },
+    computed:{
+        selected:{
+            get(){
+                return this.$store.state.selected;
+
+            },set(){}
         }
     },
     methods:{
         goto(path){
-            this.$store.commit('changeSelected',{selected:path})
+            this.$store.commit('changeSelected',{selected:path});
             this.$router.push({path});
+        },
+        confirm(path){
+            this.$store.commit('changeSelected',{selected:path});
         }
+    },
+    created(){
+        let confirmPath = location.href.split('#')[1];
+        this.confirm(confirmPath);
     }
 }
 </script>

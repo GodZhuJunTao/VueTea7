@@ -3,7 +3,7 @@
         <p class="promot-title">
             <span><i class="iconfont icon-naozhong"></i>今日特价</span>
         </p>
-        <div class="promot-action">
+        <div class="promot-action" @click="toDetail('3184')">
             <p>距离结束 :  <span>02</span> : <span>43</span> : <span>34</span></p>
             <div>
                 <img src="../assets/img/promot.jpeg" alt="">
@@ -21,7 +21,11 @@
 
 <script>
 export default {
-
+    methods:{
+        toDetail(id){
+            this.$router.push({path:'/detail/'+id});
+        }
+    }
 }
 </script>
 

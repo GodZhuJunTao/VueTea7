@@ -38,11 +38,18 @@ export default new Vuex.Store({
             },
         ],
         selected:'/home',
-        categoryCompleteList
+        categoryCompleteList,
+        categoryPId:38,
+        categoryId:23
     },
     mutations:{
         changeSelected(state,payload){
             state.selected = payload.selected;
+        },
+        changeCategory(state,payload){
+            // 传入pId大类id，和id小类id
+            state.categoryPId = payload.pId;
+            state.categoryId = payload.id;
         }
     }
 })

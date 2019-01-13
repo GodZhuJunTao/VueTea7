@@ -2,7 +2,7 @@
     <div class="home-banner">
         <div class="carousel">
             <mt-swipe :auto="3000">
-                <mt-swipe-item v-for="item in recommend" :key="item.id" class="">
+                <mt-swipe-item v-for="item in recommend" :key="item.id" class=""  @click.native="toDetail(item.gId)">
                     <img :src="item.url"/>
                 </mt-swipe-item>
             </mt-swipe>
@@ -33,19 +33,23 @@ export default {
             recommend:[
                 {
                     id:1,
-                    url:require('@/assets/img/banner1.jpeg')
+                    url:require('@/assets/img/banner1.jpeg'),
+                    gId:2312
                 },
                 {
                     id:2,
-                    url:require('@/assets/img/banner2.jpeg')
+                    url:require('@/assets/img/banner2.jpeg'),
+                    gId:2085
                 },
                 {
                     id:3,
-                    url:require('@/assets/img/banner3.jpeg')
+                    url:require('@/assets/img/banner3.jpeg'),
+                    gId:2303
                 },
                 {
                     id:4,
-                    url:require('@/assets/img/banner4.jpeg')
+                    url:require('@/assets/img/banner4.jpeg'),
+                    gId:3004
                 },
             ],
             iconNavTabs:[
@@ -110,6 +114,9 @@ export default {
                     clearInterval(ulTimer);
                 }
             },4000);
+        },
+        toDetail(id){
+            this.$router.push({path:'/detail/'+id});
         }
     },
     mounted(){

@@ -10,12 +10,12 @@ Vue.use(VueRouter);
 import Home from '@com/Home';
 import List from '@com/List';
 import Mine from '@com/Mine';
-import Search from '@com/Search';
+// import Search from '@com/Search';
 import Master from '@com/Master';
 import Login from '@com/Login';
 import Reg from '@com/Reg';
 import Cart from '@com/Cart';
-import Server from '@com/Server';
+import Contact from '@com/Contact';
 import Category from '@com/Category';
 // import CategoryList from '@com/CategoryList';
 import Detail from '@com/Detail';
@@ -29,18 +29,18 @@ const routes = [
     },
     {name:'Mine',path:'/mine',component:Mine},
     {name:'Cart',path:'/cart',component:Cart},
-    {
-        name:'Search',
-        path:'/search',
-        component:Search,
-        // 把params中的参数写入Search组件的属性,常用方法
-        // 等效于：<Search {...params} /> 只能放params
-        props:true
-    },
+    // {
+    //     name:'Search',
+    //     path:'/search',
+    //     component:Search,
+    //     // 把params中的参数写入Search组件的属性,常用方法
+    //     // 等效于：<Search {...params} /> 只能放params
+    //     props:true
+    // },
     {name:'Master',path:'/Master',component:Master},
     {name:'Login',path:'/login',component:Login},
     {name:'Reg',path:'/reg',component:Reg},
-    {name:'Server',path:'/server',component:Server},
+    {name:'Contact',path:'/contact',component:Contact},
     {name:'Detail',path:'/detail/:id',component:Detail},
     {
         // name:'Category',

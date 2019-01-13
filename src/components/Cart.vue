@@ -2,7 +2,6 @@
     <div class="page">
         <header>
             <mt-header title="购物车" class="cart-title" fixed>
-                <!-- <i slot="left">图标</i> -->
                 <mt-button slot="right">编辑</mt-button>
                 <mt-button slot="right"><span class="iconfont icon-xiaoxizhongxin"></span></mt-button>
             </mt-header>
@@ -38,14 +37,6 @@
 <script>
 import BottomBar from './BottomBar';
 export default {
-    data(){
-        return {
-            
-        }
-    },
-    methods:{
-        
-    },
     components:{BottomBar},
 }
 </script>

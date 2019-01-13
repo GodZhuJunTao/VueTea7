@@ -64,7 +64,6 @@ export default {
         width:100%;
         flex-direction:column;
         justify-content:space-around;
-        // height: 240px;
         background: #fff;
         .commend-list{
             display:flex;

@@ -61,12 +61,12 @@ export default {
         },
         getList(id){
             this.$store.commit('changeCategory',{id,pId:this.pId});
-            console.log('cChange:',this.id);
+            // console.log('cChange:',this.id);
         }
     },
     components:{CategoryList},
     created(){
-        console.log('craete:',this.parentList,'pId:',this.$store.state.categoryPId,'Id:',this.$store.state.categoryId);
+        // console.log('craete:',this.parentList,'pId:',this.$store.state.categoryPId,'Id:',this.$store.state.categoryId);
     },
     mounted(){
         // console.log('mm',this.parentList);

@@ -36,7 +36,6 @@ export default {
                 let data = res.data;
                 this.goodslist = data.Products;
             }).catch((err)=>{
-                // Indicator.close();
                 console.log(err);
             });
         },
@@ -49,7 +48,7 @@ export default {
     },
     watch: {
         gId: function (val, oldVal) {
-            console.log('new: %s, old: %s', val, oldVal);
+            // console.log('new: %s, old: %s', val, oldVal);
             this.getGoods();
         }
     },

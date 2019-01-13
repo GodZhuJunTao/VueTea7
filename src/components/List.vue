@@ -33,7 +33,7 @@
 </template>
 <script>
 import BottomBar from './BottomBar';
-import Categories from '@/mock/categories';
+// import Categories from '@/mock/categories';
 
 import '@/sass/list.scss';
 export default {
@@ -49,10 +49,6 @@ export default {
         }
     },
     components:{BottomBar},
-    created(){
-    },
-    mounted(){
-    }
 }
 </script>
 <style lang="scss" scoped>

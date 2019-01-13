@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 Vue.use(Vuex);
-import categoryCompleteList from '@/mock/categoryCompleteList';
+import categoryCompleteList from '@/mock/categoryCompleteList.json';
 
 export default new Vuex.Store({
     state:{

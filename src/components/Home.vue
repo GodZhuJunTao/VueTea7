@@ -3,7 +3,7 @@
         <header>
             <mt-header title="茶七产品" fixed>
                 <i slot="left" class="logoImg"></i>
-                <i class="iconfont icon-xiaoxizhongxin server" slot="right" @click="goto('Server')"></i>
+                <i class="iconfont icon-xiaoxizhongxin server" slot="right" @click="goto('Contact')"></i>
             </mt-header>
             <div class="search">
                 <input type="text" placeholder="搜索您喜欢的产品">
@@ -113,14 +113,11 @@ export default {
     },
     methods:{
         goto(name,id){
-            //编程式路由导航：获取router实例
-            // this.$router 路由实例（包含跳转方法）
-            // this.$route  当前路由信息
             let obj = {name};
             if(id){
                 obj.params = {id}
             }
-            this.$router.push(obj);//可通过path属性进行跳转，path可以传参，name不能传参
+            this.$router.push(obj);
         },
         gotolist(id,pId){
             this.$store.commit('changeCategory',{id,pId});
@@ -165,21 +162,7 @@ export default {
         });
     },
     mounted(){
-        //利用App.vue中绑定在原型上的$axios使用axios
-        // this.$axios.get('/dbapi/in_theaters',{
-        //     params:{
-        //         city:this.currentCity
-        //     }
-        // }).then(res=>{
-        //     let data = res.data;
-
-        //     // 获取热映top5
-        //     this.recommend = data.subjects.sort((a,b)=>b.collect_count - a.collect_count).slice(0,5);
-
-        //     // Indicator.close();
-        // }).catch(()=>{
-        //     // Indicator.close();
-        // });
+        
     }
 }
 </script>

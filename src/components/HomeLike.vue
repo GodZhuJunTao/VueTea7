@@ -56,13 +56,13 @@ export default {
         margin-top:9px;
         background:#fff;
         .like-list{
-            padding:0 9px;
+            padding:0 5px;
             display: flex;
-            justify-content: space-between;
             flex-wrap:wrap;
             li{
-                height: 231px;
-                width: 146px;
+                width:50%;
+                box-sizing: border-box;
+                padding:5px;
                 display: flex;
                 flex-direction: column;
                 img{

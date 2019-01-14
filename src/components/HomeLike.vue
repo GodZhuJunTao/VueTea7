@@ -3,7 +3,7 @@
         <HomeTitle>猜你喜欢</HomeTitle>
         <ul class="like-list">
             <li v-for="item in likeList" :key="item.ProductId" @click="toDetail(item.ProductId)">
-                <img :src="item.DefaultPicSrc.split('?')[0]"/>
+                <img :src="item.DefaultPicSrc"/>
                 <h4>{{item.ProductName}}</h4>
                 <p>￥{{item.Price}}.0</p>
             </li>
@@ -42,7 +42,11 @@ export default {
             }]
         }).then(res=>{
             let data = res.data;
-            this.likeList = data;
+            let arr = data.map(item=>{
+                item.DefaultPicSrc = item.DefaultPicSrc.split('?')[0];
+                return item;
+            });
+            this.likeList = arr;
         }).catch((err)=>{
             Indicator.close();
             console.log(err);

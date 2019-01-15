@@ -16,7 +16,43 @@ export default {
                 genre:'清香型',
                 price:261,
                 num:2,
+                img:require('@/assets/img/home_cate1.jpg'),
+                selected:false
+            },
+            {
+                id:3,
+                name:'洞庭山原产-碧螺春500g-清爽绿茶大份量礼盒',
+                genre:'清香型',
+                price:261,
+                num:5,
                 img:require('@/assets/img/home_cate2.jpg'),
+                selected:false
+            },
+            {
+                id:4,
+                name:'洞庭山原产-碧螺春500g-清爽绿茶大份量礼盒',
+                genre:'清香型',
+                price:261,
+                num:3,
+                img:require('@/assets/img/home_cate1.jpg'),
+                selected:false
+            },
+            {
+                id:5,
+                name:'洞庭山原产-碧螺春500g-清爽绿茶大份量礼盒',
+                genre:'清香型',
+                price:261,
+                num:5,
+                img:require('@/assets/img/home_cate2.jpg'),
+                selected:false
+            },
+            {
+                id:6,
+                name:'洞庭山原产-碧螺春500g-清爽绿茶大份量礼盒',
+                genre:'清香型',
+                price:261,
+                num:3,
+                img:require('@/assets/img/home_cate1.jpg'),
                 selected:false
             },
         ]

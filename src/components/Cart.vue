@@ -16,7 +16,7 @@
                 <label class="c-label">
                     <input type="checkbox" class="checkAll" v-model="checkAll">
                     <i  :class="['iconfont',{'icon-xianshi_xuanze':!checkAll,'icon-xianshi_xuanzetianchong':checkAll}]"></i>
-                    <span>全选（0）</span>
+                    <span>全选（{{selectTotal}}）</span>
                 </label>
                 <a href="javascript:;">去结算</a>
             </div>
@@ -45,6 +45,10 @@ export default {
             set(checked){
                 this.$store.commit('selectItem',{checked});
             }
+        },
+        selectTotal(){
+            let total = this.cartList.filter(item=>item.selected).length;
+            return total;
         }
     },
     components:{BottomBar,CartItem},

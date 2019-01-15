@@ -16,7 +16,7 @@
                 <div class="goods-price"><span>￥{{data.price}}.0</span></div>
                 <div class="goods-num">
                     <a href="javascript:;" class="goods-add" @click="changeNum('sub')">-</a>
-                    <input type="number" :value="data.num"/>
+                    <span>{{data.num}}</span>
                     <a href="javascript:;" class="goods-minus" @click="changeNum('add')">+</a>
                 </div>
             </div>
@@ -114,7 +114,6 @@ export default {
                     }
                 }
                 .goods-num{
-                    color:rgb(187, 178, 178);
                     a{
                         display: inline-block;
                         background-color: rgb(230, 227, 227);
@@ -125,13 +124,15 @@ export default {
                         line-height: 20px;
                         font-size:16px;
                     }
-                    input{
+                    span{
                         display:inline-block;
                         font-size:14px;
                         margin: 0 10px;
                         height:20px;
                         width:20px;
                         text-align: center;
+                        vertical-align: top;
+                        line-height: 20px;
                     }
                 }
             }

@@ -7,37 +7,51 @@
             </mt-header>
         </header>
         <div class="main">
-            <div class="goods-item">
-                <div class="goods-select">
-                    <span class="iconfont icon-right-line"></span>
-                </div>
-                <div class="goods-img">
-                    <a href="#">
-                        <img src="../assets/img/home_cate2.jpg" alt="">
-                    </a>
-                </div>
-                <div class="goods-details">
-                    <p class="goods-title"><a href="#">洞庭山原产-碧螺春500g-清爽绿茶大份量礼盒</a></p>
-                    <p class="goods-genre">清香型</p>
-                    <div class="goods-price-num">
-                        <div class="goods-price"><span>￥261.0</span></div>
-                        <div class="goods-num">
-                            <span class="goods-add">+</span>
-                            <input type="number" value="1"/>
-                            <span class="goods-minus">－</span>
-                        </div>
-                    </div>
-                </div>
-            </div> 
-
+            <ul>
+                <li is="CartItem" v-for="(item,idx) in cartList" :key="item.id" :data="item" :idx="idx"></li>
+            </ul>
         </div>
-        <BottomBar/>
+        <footer>
+            <div class="operation">
+                <label class="c-label">
+                    <input type="checkbox" class="checkAll" v-model="checkAll">
+                    <i  :class="['iconfont',{'icon-xianshi_xuanze':!checkAll,'icon-xianshi_xuanzetianchong':checkAll}]"></i>
+                    <span>全选（0）</span>
+                </label>
+                <a href="javascript:;">去结算</a>
+            </div>
+            <BottomBar/>
+        </footer>
     </div>
 </template>
 <script>
+import CartItem from './CartItem';
 import BottomBar from './BottomBar';
+import '@/sass/cart.scss';
 export default {
-    components:{BottomBar},
+    data(){
+        return {
+            // checkAll:false,
+        }
+    },
+    computed:{
+        cartList(){
+            return this.$store.state.cart.cartList
+        },
+        checkAll:{
+            get(){
+                return this.cartList.every(item=>item.selected);
+            },
+            set(checked){
+                this.$store.commit('selectItem',{checked});
+            }
+        }
+    },
+    components:{BottomBar,CartItem},
+    created(){
+        let arr = this.cartList;
+        this.$store.commit('acquireCartList',arr);
+    }
 }
 </script>
 <style lang="scss" scoped>
@@ -55,70 +69,6 @@ export default {
 
         .main{
             background-color: #f5f5f5;
-            .goods-item{
-                display: flex;;
-                height:80px;
-                padding:10px;
-                border-bottom: 1px solid #ccc;
-                 background-color:#fff;
-                .goods-select{
-                    height: 70px;
-                    width: 30px;
-                    line-height: 60px;
-                }
-                .goods-img{
-                    width: 80px;
-                    padding: 0 5px;
-                    img{
-                        height: 70px;
-                        width: 70px;
-                        border: 1px solid #ccc;
-                    }
-                }
-                .goods-title{
-                    font-size: 13px;
-                    width:200px;
-                    a{
-                        color: #000;
-                    }    
-                }
-                .goods-genre{
-                    line-height:16px;
-                    font-size: 10px;
-                    color: rgb(158, 156, 156);
-                }
-                .goods-price-num{
-                    display:flex;
-                    justify-content: space-between;
-                    height: 20px;
-                    padding-top: 11px;
-                    .goods-price{
-                        span{
-                            color: rgb(160, 14, 14);
-                        }
-                    }
-                    .goods-num{
-                        color:rgb(187, 178, 178);
-                        span{
-                            display: inline-block;
-                            background-color: rgb(230, 227, 227);
-                            height: 20px;
-                            width: 20px;
-                            border-radius: 50%;
-                            text-align: center;
-                            line-height: 20px;
-
-                        }
-                        input{
-                            display:inline-block;
-                            margin: 0 10px;
-                            height:20px;
-                            width:20px;
-                            text-align: center;
-                        }
-                    }
-                }
-            }
         }
         
     }

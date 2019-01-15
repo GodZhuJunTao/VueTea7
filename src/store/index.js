@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 Vue.use(Vuex);
 import categoryCompleteList from '@/mock/categoryCompleteList.json';
+import cart from './cart';
 
 export default new Vuex.Store({
     state:{
@@ -41,6 +42,7 @@ export default new Vuex.Store({
         categoryCompleteList,
         categoryPId:38,
         categoryId:23
+        
     },
     mutations:{
         changeSelected(state,payload){
@@ -51,5 +53,11 @@ export default new Vuex.Store({
             state.categoryPId = payload.pId;
             state.categoryId = payload.id;
         }
+    },
+    actions:{
+        
+    },
+    modules:{
+        cart
     }
 })

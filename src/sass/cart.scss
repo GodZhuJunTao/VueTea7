@@ -1,0 +1,42 @@
+.c-label{
+    position:relative;
+    input[type="checkbox"]{
+        position:absolute;
+        top:-9999px;
+        left:-9999px;
+    }
+}
+.icon-xianshi_xuanze,.icon-xianshi_xuanzetianchong{
+    font-size:18px;
+}
+.icon-xianshi_xuanzetianchong{
+    color:#b0352f;
+}
+
+footer{
+    .operation{
+        height: 50px;
+        border-top:1px solid #ccc;
+        display: flex;
+        justify-content: space-between;
+        background:#fff;
+        padding-left:10px;
+        align-items: center;
+        .c-label{
+            height: 100%;
+            flex:1;
+            display: flex;
+            align-items: center;
+            span{
+                font-size:14px;
+            }
+        }
+        a{
+            display: block;
+            height: 100%;
+            padding:0 20px;
+            font-size:14px;
+            line-height: 50px;
+        }
+    }
+}
